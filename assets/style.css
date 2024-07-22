@@ -1,4 +1,55 @@
-.section-header {
-  font-size: 7rem;
+:root {
+  --clr-primary: #212CFF;
+  --clr-secondary: #FFF5E0;
+  --bs-body-color: #212CFF !important;
+  --main-font: "Roboto", sans-serif !important;
 }
 
+.nav-item, .nav-link {
+  color: var(--clr-primary) !important;
+}
+
+.section-header {
+  font-size: 7rem;
+  font-family: var(--main-font);
+  font-weight: bold;
+  font-style: normal;
+  line-height: 0.8;
+}
+
+.blue-bg {
+  background-color: var(--clr-primary);
+}
+
+.peach-bg {
+  background-color: var(--clr-secondary);
+}
+
+.text-peach {
+  color: var(--clr-secondary);
+  text-decoration: none;
+}
+
+.text-blue {
+  color: var(--clr-primary);
+  text-decoration: none;
+}
+
+.text-bg-blue {
+  background-color: var(--clr-primary);
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* .roboto-bold {
+  font-family: var(--main-font);
+  font-weight: bold;
+  font-style: normal;
+  line-height: 0.8;
+} */

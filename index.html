@@ -5,33 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/assets/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   <title>Robert.Likes.Coding</title>
 </head>
-<body>
+<body class="peach-bg">
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary container">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg peach-bg">
+      <div class="container-fluid container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active fs-5" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">&lt;About Me&gt;</About></a></li>
+              <a class="nav-link fs-5" href="#about">&lt;About Me&gt;</About></a></li>
             <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects_</a>
+              <a class="nav-link fs-5" href="#projects">Projects_</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">/Contact</a>
+              <a class="nav-link fs-5" href="#contact">/Contact</a>
             </li>
             <li class="nav-item">
-              <i class="nav-link fa-brands fa-github fs-4"></i>
+              <a href="https://github.com/RobertLikesCoding"><i class="nav-link fa-brands fa-github fs-4"></i></a>
             </li>
             <li class="nav-item">
-              <i class="nav-link fa-brands fa-linkedin fs-4"></i>
+              <a href="https://www.linkedin.com/in/robertbaufeld/"><i class="nav-link fa-brands fa-linkedin fs-4"></i></a>
             </li>
           </ul>
         </div>
@@ -44,7 +47,7 @@
         <img class="z-n1 position-absolute" src="/assets/images/Box.png" alt="blue boxes in the shape of a desktop and mobile phone.">
         <div class="row">
           <div class="col">
-            <span class="section-header">Robert <br> Baufeld</span>
+            <span class="section-header roboto-bold">Robert <br> Baufeld</span>
             <h1>Full-Stack Web Developer</h1>
           </div>
           <div class="col-4">
@@ -90,6 +93,7 @@
     </section>
 
     <section id="projects" class="d-flex flex-column container">
+      <span class="section-header">Projects_</span>
       <div class="d-flex justify-content-center align-items-center vh-100">
         <div class="row">
           <div class="col">
@@ -100,16 +104,16 @@
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <a href="https://www.devbuddy.co" target="blank"><h5 class="card-title link-primary">DevBuddy</h5></a>
+                    <a href="https://www.devbuddy.co" target="blank"><h5 class="text-blue">DevBuddy</h5></a>
                     <p class="card-text">A social platform for scheduling learning sessions with other code enthusiasts.</p>
                     <div class="d-flex gap-1 flex-wrap">
-                      <span class="badge rounded-pill text-bg-primary">Ruby On Rails</span>
-                      <span class="badge rounded-pill text-bg-primary">JavaScript</span>
-                      <span class="badge rounded-pill text-bg-primary">PostGreSQL</span>
-                      <span class="badge rounded-pill text-bg-primary">Heroku</span>
-                      <span class="badge rounded-pill text-bg-primary">SCSS</span>
-                      <span class="badge rounded-pill text-bg-primary">HTML</span>
-                      <span class="badge rounded-pill text-bg-primary">Bootstrap</span>
+                      <span class="badge rounded-pill text-bg-blue">Ruby On Rails</span>
+                      <span class="badge rounded-pill text-bg-blue">JavaScript</span>
+                      <span class="badge rounded-pill text-bg-blue">PostGreSQL</span>
+                      <span class="badge rounded-pill text-bg-blue">Heroku</span>
+                      <span class="badge rounded-pill text-bg-blue">SCSS</span>
+                      <span class="badge rounded-pill text-bg-blue">HTML</span>
+                      <span class="badge rounded-pill text-bg-blue">Bootstrap</span>
                     </div>
                   </div>
                 </div>
@@ -122,16 +126,16 @@
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <a href="https://airbnb-costumize-0a8572564e14.herokuapp.com/costumes" target="blank"><h5 class="card-title link-primary">Costumize</h5></a>
+                    <a href="https://airbnb-costumize-0a8572564e14.herokuapp.com/costumes" target="blank"><h5 class="text-blue">Costumize</h5></a>
                     <p class="card-text">An AirBnB clone for renting and renting out costumes..</p>
                     <div class="d-flex gap-1 flex-wrap">
-                      <span class="badge rounded-pill text-bg-primary">Ruby On Rails</span>
-                      <span class="badge rounded-pill text-bg-primary">JavaScript</span>
-                      <span class="badge rounded-pill text-bg-primary">PostGreSQL</span>
-                      <span class="badge rounded-pill text-bg-primary">Heroku</span>
-                      <span class="badge rounded-pill text-bg-primary">SCSS</span>
-                      <span class="badge rounded-pill text-bg-primary">HTML</span>
-                      <span class="badge rounded-pill text-bg-primary">Bootstrap</span>
+                      <span class="badge rounded-pill text-bg-blue">Ruby On Rails</span>
+                      <span class="badge rounded-pill text-bg-blue">JavaScript</span>
+                      <span class="badge rounded-pill text-bg-blue">PostGreSQL</span>
+                      <span class="badge rounded-pill text-bg-blue">Heroku</span>
+                      <span class="badge rounded-pill text-bg-blue">SCSS</span>
+                      <span class="badge rounded-pill text-bg-blue">HTML</span>
+                      <span class="badge rounded-pill text-bg-blue">Bootstrap</span>
                     </div>
                   </div>
                 </div>
@@ -144,12 +148,12 @@
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <a href="https://www.roberthoracemusic.com" target="blank"><h5 class="card-title link-primary">Robert Horace Website</h5></a>
+                    <a href="https://www.roberthoracemusic.com" target="blank"><h5 class="text-blue">Robert Horace Website</h5></a>
                     <p class="card-text">A static website for my music project.</p>
                     <div class="d-flex gap-1 flex-wrap">
-                      <span class="badge rounded-pill text-bg-primary">CSS</span>
-                      <span class="badge rounded-pill text-bg-primary">HTML</span>
-                      <span class="badge rounded-pill text-bg-primary">Wordpress</span>
+                      <span class="badge rounded-pill text-bg-blue">CSS</span>
+                      <span class="badge rounded-pill text-bg-blue">HTML</span>
+                      <span class="badge rounded-pill text-bg-blue">Wordpress</span>
                     </div>
                   </div>
                 </div>
@@ -158,13 +162,14 @@
           </div>
         </div>
     </section>
-    <section id="projects" class="d-flex flex-column bg-primary">
+    <section id="projects" class="d-flex flex-column blue-bg">
+      
       <div class="container d-flex justify-content-center align-items-center vh-100">
-        <span class="section-header text-secondary">Contact_</span>
+        <span class="section-header text-peach">Contact_</span>
         <div class="row">
           <div class="col">
-            <h3 class="text-secondary">Let's chat!</h3>
-            <a class="link-secondary" href="mailto:rbaufeld@posteo.de">rbaufeld@posteo.de</a>
+            <h3 class="text-peach">Let's chat!</h3>
+            <a class="text-peach" href="mailto:rbaufeld@posteo.de">rbaufeld@posteo.de</a>
           </div>
         </div>
       </div>
