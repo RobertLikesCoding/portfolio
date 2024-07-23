@@ -49,14 +49,30 @@ html {
   height: 600px;
 }
 
+@media (max-width: 1198px) {
+  .blue-box {
+    height: 400px;
+  }
+
+  .hero-header {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .hero-header {
+    font-size: 4rem;
+  }
+}
+
 .blue-box-top {
-  height: 3rem;
+  height: 2rem;
   border-bottom: 2px solid var(--clr-primary);
   background-color: var(--clr-tertiary);
 }
 
 .blue-box-bottom {
-  height: 3rem;
+  height: 2rem;
   border-top: 2px solid var(--clr-primary);
   background-color: var(--clr-tertiary);
 }
