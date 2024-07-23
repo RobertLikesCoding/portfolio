@@ -1,12 +1,13 @@
 :root {
   --clr-primary: #212CFF;
   --clr-secondary: #FFF5E0;
+  --clr-tertiary: #212cff0d;
   --bs-body-color: #212CFF !important;
   --main-font: "Roboto", sans-serif !important;
 }
 
 .nav-item, .nav-link {
-  color: var(--clr-primary) !important;
+  color: var(--clr-primary);
 }
 
 .section-header {
@@ -15,6 +16,38 @@
   font-weight: bold;
   font-style: normal;
   line-height: 0.8;
+}
+
+.hero-header {
+  font-size: 10rem;
+  font-family: var(--main-font);
+  font-weight: bold;
+  font-style: normal;
+  line-height: 0.8;
+}
+
+.blue-box {
+  background-color: var(--clr-tertiary);
+  border: 2px solid var(--clr-primary);
+  width: 80%;
+  height: 600px;
+}
+
+.blue-box-top {
+  height: 3rem;
+  border-bottom: 2px solid var(--clr-primary);
+  background-color: var(--clr-tertiary);
+}
+
+.blue-box-bottom {
+  height: 3rem;
+  border-top: 2px solid var(--clr-primary);
+  background-color: var(--clr-tertiary);
+}
+
+.phone {
+  height: 400px;
+  width: 220px;
 }
 
 .blue-bg {
@@ -35,7 +68,7 @@
   text-decoration: none;
 }
 
-.text-bg-blue {
+.badge-bg-blue {
   background-color: var(--clr-primary);
 }
 
@@ -47,9 +80,6 @@ a {
   }
 }
 
-/* .roboto-bold {
-  font-family: var(--main-font);
-  font-weight: bold;
-  font-style: normal;
-  line-height: 0.8;
-} */
+.blue-shadow {
+  box-shadow: 8px 8px 0 0 var(--clr-primary);
+}

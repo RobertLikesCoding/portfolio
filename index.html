@@ -20,21 +20,21 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
             <li class="nav-item">
-              <a class="nav-link active fs-5" aria-current="page" href="#">Home</a>
+              <a class="nav-link active fs-5 text-reset" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5" href="#about">&lt;About Me&gt;</About></a></li>
+              <a class="nav-link fs-5 text-reset" href="#about">&lt;About Me&gt;</About></a></li>
             <li class="nav-item">
-              <a class="nav-link fs-5" href="#projects">Projects_</a>
+              <a class="nav-link fs-5 text-reset" href="#projects">Projects_</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5" href="#contact">/Contact</a>
+              <a class="nav-link fs-5 text-reset" href="#contact">/Contact</a>
             </li>
             <li class="nav-item">
-              <a href="https://github.com/RobertLikesCoding"><i class="nav-link fa-brands fa-github fs-4"></i></a>
+              <a href="https://github.com/RobertLikesCoding" class="nav-link text-reset"><i class="fa-brands fa-github fs-4"></i></a>
             </li>
             <li class="nav-item">
-              <a href="https://www.linkedin.com/in/robertbaufeld/"><i class="nav-link fa-brands fa-linkedin fs-4"></i></a>
+              <a href="https://www.linkedin.com/in/robertbaufeld/" class="nav-link text-reset"><i class="fa-brands fa-linkedin fs-4"></i></a>
             </li>
           </ul>
         </div>
@@ -44,22 +44,37 @@
   <main>
     <section id="home" class="d-flex flex-column container">
       <div class="d-flex justify-content-center align-items-center vh-100">
-        <img class="z-n1 position-absolute" src="/assets/images/Box.png" alt="blue boxes in the shape of a desktop and mobile phone.">
-        <div class="row">
+        <div class="blue-box rounded-4 d-flex flex-column">
+          <div class="blue-box-top"></div>
+          <div class="row d-flex align-items-end flex-grow-1 p-3">
+            <div class="col-8">
+              <span class="hero-header">Robert <br> Baufeld</span>
+              <h1 class="ps-2 m-0">Full-Stack Web Developer</h1>
+            </div>
+            <div class="col-4 d-flex justify-content-end">
+              <div class="blue-box phone rounded-4 d-flex flex-column justify-content-between me-2 mb-2">
+                <div>
+                  <div class="blue-box-top"></div>
+                  <h3 class="p-2">I like building things from code.</h3>
+                </div>
+                <div class="blue-box-bottom"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="row">
           <div class="col">
-            <span class="section-header roboto-bold">Robert <br> Baufeld</span>
-            <h1>Full-Stack Web Developer</h1>
           </div>
           <div class="col-4">
             <h3>I like bulding things from code.</h3>
           </div>
-        </div>
+        </div> -->
       </div>
       <i class="fa-solid fa-angles-down fs-3 mx-auto"></i>
     </section>
 
     <section id="about" class="container">
-      <span class="section-header">About Me_</span>
+      <span class="section-header my-5">About Me_</span>
       <div class="d-flex justify-content-center align-items-center vh-100">
         <div class="row">
             <div class="col">
@@ -93,67 +108,67 @@
     </section>
 
     <section id="projects" class="d-flex flex-column container">
-      <span class="section-header">Projects_</span>
+      <span class="section-header my-5">Projects_</span>
       <div class="d-flex justify-content-center align-items-center vh-100">
         <div class="row">
           <div class="col">
-            <div class="card mb-5 border-0">
+            <div class="mb-5 border-0">
               <div class="row g-0 d-flex align-items-center">
                 <div class="col-md-4">
-                  <img src="/assets/images/devbuddy1.png" class="object-fit-contain border" alt="screenshot of website devbuddy.">
+                  <img src="/assets/images/devbuddy1.png" class="object-fit-contain border blue-shadow" alt="screenshot of website devbuddy.">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
                     <a href="https://www.devbuddy.co" target="blank"><h5 class="text-blue">DevBuddy</h5></a>
                     <p class="card-text">A social platform for scheduling learning sessions with other code enthusiasts.</p>
                     <div class="d-flex gap-1 flex-wrap">
-                      <span class="badge rounded-pill text-bg-blue">Ruby On Rails</span>
-                      <span class="badge rounded-pill text-bg-blue">JavaScript</span>
-                      <span class="badge rounded-pill text-bg-blue">PostGreSQL</span>
-                      <span class="badge rounded-pill text-bg-blue">Heroku</span>
-                      <span class="badge rounded-pill text-bg-blue">SCSS</span>
-                      <span class="badge rounded-pill text-bg-blue">HTML</span>
-                      <span class="badge rounded-pill text-bg-blue">Bootstrap</span>
+                      <span class="badge rounded-pill badge-bg-blue">Ruby On Rails</span>
+                      <span class="badge rounded-pill badge-bg-blue">JavaScript</span>
+                      <span class="badge rounded-pill badge-bg-blue">PostGreSQL</span>
+                      <span class="badge rounded-pill badge-bg-blue">Heroku</span>
+                      <span class="badge rounded-pill badge-bg-blue">SCSS</span>
+                      <span class="badge rounded-pill badge-bg-blue">HTML</span>
+                      <span class="badge rounded-pill badge-bg-blue">Bootstrap</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="card mb-5 border-0">
+            <div class="mb-5 border-0">
               <div class="row g-0 d-flex align-items-center">
                 <div class="col-md-4">
-                  <img src="/assets/images/costumize.png" class="object-fit-contain border" alt="screenshot of website devbuddy.">
+                  <img src="/assets/images/costumize.png" class="object-fit-contain border blue-shadow" alt="screenshot of website devbuddy.">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
                     <a href="https://airbnb-costumize-0a8572564e14.herokuapp.com/costumes" target="blank"><h5 class="text-blue">Costumize</h5></a>
                     <p class="card-text">An AirBnB clone for renting and renting out costumes..</p>
                     <div class="d-flex gap-1 flex-wrap">
-                      <span class="badge rounded-pill text-bg-blue">Ruby On Rails</span>
-                      <span class="badge rounded-pill text-bg-blue">JavaScript</span>
-                      <span class="badge rounded-pill text-bg-blue">PostGreSQL</span>
-                      <span class="badge rounded-pill text-bg-blue">Heroku</span>
-                      <span class="badge rounded-pill text-bg-blue">SCSS</span>
-                      <span class="badge rounded-pill text-bg-blue">HTML</span>
-                      <span class="badge rounded-pill text-bg-blue">Bootstrap</span>
+                      <span class="badge rounded-pill badge-bg-blue">Ruby On Rails</span>
+                      <span class="badge rounded-pill badge-bg-blue">JavaScript</span>
+                      <span class="badge rounded-pill badge-bg-blue">PostGreSQL</span>
+                      <span class="badge rounded-pill badge-bg-blue">Heroku</span>
+                      <span class="badge rounded-pill badge-bg-blue">SCSS</span>
+                      <span class="badge rounded-pill badge-bg-blue">HTML</span>
+                      <span class="badge rounded-pill badge-bg-blue">Bootstrap</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="card mb-5 border-0">
+            <div class="mb-5 border-0">
               <div class="row g-0 d-flex align-items-center">
                 <div class="col-md-4">
-                  <img src="/assets/images/horace.png" class="object-fit-contain border" alt="screenshot of website devbuddy.">
+                  <img src="/assets/images/horace.png" class="object-fit-contain border blue-shadow" alt="screenshot of website devbuddy.">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
                     <a href="https://www.roberthoracemusic.com" target="blank"><h5 class="text-blue">Robert Horace Website</h5></a>
                     <p class="card-text">A static website for my music project.</p>
                     <div class="d-flex gap-1 flex-wrap">
-                      <span class="badge rounded-pill text-bg-blue">CSS</span>
-                      <span class="badge rounded-pill text-bg-blue">HTML</span>
-                      <span class="badge rounded-pill text-bg-blue">Wordpress</span>
+                      <span class="badge rounded-pill badge-bg-blue">CSS</span>
+                      <span class="badge rounded-pill badge-bg-blue">HTML</span>
+                      <span class="badge rounded-pill badge-bg-blue">Wordpress</span>
                     </div>
                   </div>
                 </div>
@@ -163,7 +178,7 @@
         </div>
     </section>
     <section id="projects" class="d-flex flex-column blue-bg">
-      
+
       <div class="container d-flex justify-content-center align-items-center vh-100">
         <span class="section-header text-peach">Contact_</span>
         <div class="row">
