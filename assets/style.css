@@ -6,6 +6,10 @@
   --main-font: "Roboto", sans-serif !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .nav-item, .nav-link {
   color: var(--clr-primary);
 }
@@ -94,4 +98,16 @@ a {
 
 .blue-shadow {
   box-shadow: 8px 8px 0 0 var(--clr-primary);
+}
+
+.next-section {
+  transition: transform 0.1s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: translateY(0px);
+  }
 }
