@@ -10,6 +10,14 @@
   color: var(--clr-primary);
 }
 
+.my-navbar {
+  list-style: none;
+
+  ul {
+    padding: 0px;
+  }
+}
+
 .section-header {
   font-size: 7rem;
   font-family: var(--main-font);
