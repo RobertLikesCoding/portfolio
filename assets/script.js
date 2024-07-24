@@ -3,8 +3,13 @@ const arrows = document.querySelectorAll('.arrow');
 
 navItems.forEach(item => {
   item.addEventListener('click', () => {
-    navItems.forEach(item => item.classList.remove('fw-bold'));
+    navItems.forEach(i => {
+      i.classList.remove('fw-bold');
+      i.textContent = i.textContent.replace(/_$/, '');
+    });
+
     item.classList.add('fw-bold');
+    item.textContent += '_';
   });
 });
 

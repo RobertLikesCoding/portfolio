@@ -20,6 +20,10 @@ html {
 
 .nav-item, .nav-link {
   color: var(--clr-primary);
+
+  &:hover {
+    color: #000677;
+  }
 }
 
 .my-navbar {
@@ -85,10 +89,6 @@ html {
 
 a {
   text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 .blue-shadow {
