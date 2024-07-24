@@ -89,6 +89,10 @@ html {
 
 a {
   text-decoration: none;
+
+  &:hover {
+    color: #000677;
+  }
 }
 
 .blue-shadow {
@@ -150,5 +154,19 @@ a {
   .nav-item, .nav-link {
     color: var(--clr-secondary);
     list-style: none;
+  }
+}
+
+.project-card {
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.github-repo {
+  &:hover {
+    font-weight: 500;
   }
 }
