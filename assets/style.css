@@ -27,7 +27,7 @@ html {
 }
 
 .section-header {
-  font-size: 7rem;
+  font-size: clamp(3rem, 10vw, 7rem);;
   font-family: var(--main-font);
   font-weight: bold;
   font-style: normal;
@@ -35,7 +35,7 @@ html {
 }
 
 .hero-header {
-  font-size: 10rem;
+  font-size: clamp(4rem, 10vw, 9rem);
   font-family: var(--main-font);
   font-weight: bold;
   font-style: normal;
@@ -54,16 +54,15 @@ html {
     height: 400px;
   }
 
-  .hero-header {
-    font-size: 6rem;
+  .phone-text {
+      font-size: 1rem;
+
   }
 }
 
-@media (max-width: 750px) {
-  .hero-header {
-    font-size: 4rem;
-  }
-}
+/* @media (max-width: 750px) {
+
+} */
 
 .blue-box-top {
   height: 2rem;
@@ -126,4 +125,22 @@ a {
   &:active {
     transform: translateY(0px);
   }
+}
+
+.about-img {
+  max-width: 80vw;
+  object-fit: contain;
+}
+
+.about-box {
+  max-width: 90vw;
+  object-fit: contain;
+}
+
+.about-img-container {
+  max-height: 500px
+}
+
+section {
+  height: 100%;
 }
