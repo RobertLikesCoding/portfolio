@@ -23,12 +23,12 @@
               <a class="nav-link active fs-5 text-reset fw-medium" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 text-reset fw-medium" href="#about">&lt;About Me&gt;</About></a></li>
-            <li class="nav-item">
-              <a class="nav-link fs-5 text-reset fw-medium" href="#projects">Projects_</a>
+              <a class="nav-link fs-5 text-reset fw-medium" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 text-reset fw-medium" href="#contact">/Contact</a>
+              <a class="nav-link fs-5 text-reset fw-medium" href="#about">About Me</About></a></li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 text-reset fw-medium" href="#contact">Contact</a>
             </li>
             <li class="nav-item">
               <a href="https://github.com/RobertLikesCoding" target="blank" class="text-reset"><i class="fa-brands fa-github fs-4"></i></a>
@@ -41,161 +41,170 @@
       </div>
     </nav>
   </header>
+
   <main>
-    <section id="home" class="d-flex flex-column container mb-5">
-      <div class="d-flex flex-column justify-content-center align-items-center vh-100">
-          <div class="blue-box rounded-4 d-flex flex-column">
-            <div class="blue-box-top"></div>
-            <div class="row d-flex align-items-end flex-grow-1 p-3">
-              <div class="col-8">
-                <span class="hero-header">Robert Baufeld</span>
-                <h1 class="ps-2 m-0">Full-Stack Web Developer</h1>
-              </div>
-              <div class="col-4 d-flex justify-content-end">
-                <div class="blue-box phone rounded-4 d-flex flex-column justify-content-between me-2 mb-2">
-                  <div>
-                    <div class="blue-box-top"></div>
-                    <h3 class="p-2">I like building things from code.</h3>
-                  </div>
-                  <div class="blue-box-bottom"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        <a href="#about" class="arrow"><i class="fa-solid fa-angles-down fs-4 position-absolute bottom-0 start-50 translate-x-50 mb-5 text-blue next-section"></i></a>
-      </div>
-    </section>
-
-    <section id="about" class="container position-relative">
-      <div class="d-flex flex-column justify-content-center vh-100">
-        <span class="section-header mb-5">About Me_</span>
-        <div class="row">
-          <div class="col d-flex justify-content-center">
-            <img class="z-n1 position-absolute mt-5" src="assets/images/Box_about_me.png" alt="decorative box.">
-            <img class="object-fit-cover border rounded-5 w-50" src="assets/images/Portrait2_more_contrast.jpg" alt="portrait of Robert Baufeld.">
-          </div>
-          <div class="col">
-            <p class="mb-3 fs-6">In late 2023, I took a leap and dove headfirst into coding. After 4+ months of self-learning, I solidified my foundation with Le Wagon's intensive 6-month coding bootcamp. Now, I'm chomping at the bit to put my skills to work, building and deploying full-fledged web applications in a professional setting.
-
-              Beyond the code, I bring a unique perspective. As a 5-year independent musician and producer, I'm no stranger to constant learning and troubleshooting. This DIY spirit translates perfectly to the world of development, where there's always more to explore.
-
-              I'm a quick learner who thrives in a collaborative environment. I'm eager to join a dynamic team where I can contribute my skills, learn from experienced developers, and grow alongside the team. Let's build something awesome together!
-              Feel free to reach out if you're looking for a passionate and quick learner!
-            </p>
-            <h3 class="mb-3">_Tech I'm using_</h3>
-            <div class="d-flex justify-content-between mb-3">
-              <i class="fa-brands fa-js fs-1"></i>
-              <i class="fa-brands fa-html5 fs-1"></i>
-              <i class="fa-brands fa-css3-alt fs-1"></i>
-              <i class="fa-brands fa-github fs-1"></i>
-              <i class="fa-brands fa-git-alt fs-1"></i>
-              <i class="fa-brands fa-figma fs-1"></i>
-              <img class="object-fit-fit" src="assets/images/ruby.png" alt="ruby icon.">
-            </div>
-            <h3 class="mb-3">_Tech I'm learning_</h3>
-              <p class="fs-5">React, Typescript, implementing AI</p>
-          </div>
+    <section class="container pt-navbar">
+      <div class="row d-flex justify-content-center align-items-center section-100">
+        <div class="col-md-4 col-sm-7 col-9 d-flex justify-content-center">
+          <img class="rounded-4 portrait" src="assets/images/Portrait2_more_contrast.jpg" alt="portrait of Robert Baufeld.">
         </div>
+        <div class="col-md-5 col-sm-7 col-10 d-flex flex-column justify-content-between align-items-center">
+          <span class="hero-header text-center">Robert <br>Baufeld</span>
+          <span class="hero-subline">Full-Stack Web Developer</span>
+        </div>
+        <h4 class="m-0 text-center">I like building things from code.</h4>
       </div>
-      <a href="#projects" class="arrow"><i class="fa-solid fa-angles-down fs-4 position-absolute bottom-0 start-50 translate-x-50 mb-5 text-blue next-section"></i></a>
     </section>
 
-    <section id="projects" class="d-flex flex-column container position-relative">
-      <div class="d-flex flex-column justify-content-center vh-100">
+    <section id="projects" class="d-flex flex-column container pt-navbar">
         <span class="section-header my-5">Projects_</span>
-        <div class="d-flex flex-column justify-content-center align-items-center">
-          <div class="row">
-            <div class="col">
-              <div class="mb-5 border-0">
-                <div class="row g-0 d-flex align-items-center">
-                  <div class="col-md-4">
-                    <img src="assets/images/devbuddy1.png" class="object-fit-contain border blue-shadow" alt="screenshot of website devbuddy.">
+        <div class="d-flex flex-column justify-content-center align-items-center py-3">
+          <div class="mb-5 card-width project-card">
+            <div class="row g-4">
+              <div class="col-md-5 d-flex justify-content-center">
+                <img src="assets/images/grafik 2.png" class="object-fit-contain border blue-shadow" alt="screenshot of website devbuddy.">
+              </div>
+              <div class="col-md-7">
+                <div class="card-body p-3">
+                  <div class="d-flex justify-content-between">
+                    <a href="https://www.devbuddy.co" class="text-blue" target="blank"><h5 >DevBuddy</h5></a>
+                    <a href="https://github.com/clarroquia/devbuddy" class="text-blue github-repo" target="blank"><i class="fa-brands fa-github pe-1"></i>Github Repo</a>
                   </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <a href="https://www.devbuddy.co" target="blank"><h5 class="text-blue">DevBuddy</h5></a>
-                      <p class="card-text">A social platform for scheduling learning sessions with other code enthusiasts.</p>
-                      <div class="d-flex gap-1 flex-wrap">
-                        <span class="badge rounded-pill badge-bg-blue">Ruby On Rails</span>
-                        <span class="badge rounded-pill badge-bg-blue">JavaScript</span>
-                        <span class="badge rounded-pill badge-bg-blue">PostGreSQL</span>
-                        <span class="badge rounded-pill badge-bg-blue">Heroku</span>
-                        <span class="badge rounded-pill badge-bg-blue">SCSS</span>
-                        <span class="badge rounded-pill badge-bg-blue">HTML</span>
-                        <span class="badge rounded-pill badge-bg-blue">Bootstrap</span>
-                      </div>
-                    </div>
+                  <p class="text-blue">A social platform for scheduling learning sessions with other code enthusiasts.</p>
+                  <div class="d-flex gap-1 flex-wrap">
+                    <span class="badge rounded-pill badge-bg-blue">Ruby On Rails</span>
+                    <span class="badge rounded-pill badge-bg-blue">JavaScript</span>
+                    <span class="badge rounded-pill badge-bg-blue">PostGreSQL</span>
+                    <span class="badge rounded-pill badge-bg-blue">Heroku</span>
+                    <span class="badge rounded-pill badge-bg-blue">SCSS</span>
+                    <span class="badge rounded-pill badge-bg-blue">HTML</span>
+                    <span class="badge rounded-pill badge-bg-blue">Bootstrap</span>
                   </div>
                 </div>
               </div>
-              <div class="mb-5 border-0">
-                <div class="row g-0 d-flex align-items-center">
-                  <div class="col-md-4">
-                    <img src="assets/images/costumize.png" class="object-fit-contain border blue-shadow" alt="screenshot of website devbuddy.">
+            </div>
+          </div>
+
+          <div class="mb-5 card-width project-card">
+            <div class="row g-4">
+              <div class="col-md-5 d-flex justify-content-center">
+                <img src="assets/images/grafik 3.png" class="object-fit-contain border blue-shadow" alt="screenshot of website devbuddy.">
+              </div>
+              <div class="col-md-7">
+                <div class="card-body p-3">
+                  <div class="d-flex justify-content-between">
+                    <a href="https://airbnb-costumize-0a7572564e14.herokuapp.com/costumes" class="text-blue" target="blank"><h5 >Costumize</h5></a>
+                    <a href="https://github.com/thedavidwenk/costumize" class="text-blue github-repo"><i class="fa-brands fa-github pe-1"></i>Github Repo</a>
                   </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <a href="https://airbnb-costumize-0a8572564e14.herokuapp.com/costumes" target="blank"><h5 class="text-blue">Costumize</h5></a>
-                      <p class="card-text">An AirBnB clone for renting and renting out costumes..</p>
-                      <div class="d-flex gap-1 flex-wrap">
-                        <span class="badge rounded-pill badge-bg-blue">Ruby On Rails</span>
-                        <span class="badge rounded-pill badge-bg-blue">JavaScript</span>
-                        <span class="badge rounded-pill badge-bg-blue">PostGreSQL</span>
-                        <span class="badge rounded-pill badge-bg-blue">Heroku</span>
-                        <span class="badge rounded-pill badge-bg-blue">SCSS</span>
-                        <span class="badge rounded-pill badge-bg-blue">HTML</span>
-                        <span class="badge rounded-pill badge-bg-blue">Bootstrap</span>
-                      </div>
-                    </div>
+                  <p class="text-blue">An AirBnB clone for renting and renting out costumes.</p>
+                  <div class="d-flex gap-1 flex-wrap">
+                    <span class="badge rounded-pill badge-bg-blue">Ruby On Rails</span>
+                    <span class="badge rounded-pill badge-bg-blue">JavaScript</span>
+                    <span class="badge rounded-pill badge-bg-blue">PostGreSQL</span>
+                    <span class="badge rounded-pill badge-bg-blue">Heroku</span>
+                    <span class="badge rounded-pill badge-bg-blue">SCSS</span>
+                    <span class="badge rounded-pill badge-bg-blue">HTML</span>
+                    <span class="badge rounded-pill badge-bg-blue">Bootstrap</span>
                   </div>
                 </div>
               </div>
-              <div class="mb-5 border-0">
-                <div class="row g-0 d-flex align-items-center">
-                  <div class="col-md-4">
-                    <img src="assets/images/horace.png" class="object-fit-contain border blue-shadow" alt="screenshot of website devbuddy.">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <a href="https://www.roberthoracemusic.com" target="blank"><h5 class="text-blue">Robert Horace Website</h5></a>
-                      <p class="card-text">A static website for my music project.</p>
-                      <div class="d-flex gap-1 flex-wrap">
-                        <span class="badge rounded-pill badge-bg-blue">CSS</span>
-                        <span class="badge rounded-pill badge-bg-blue">HTML</span>
-                        <span class="badge rounded-pill badge-bg-blue">Wordpress</span>
-                      </div>
-                    </div>
+            </div>
+          </div>
+
+          <div class="mb-5 card-width project-card">
+            <div class="row g-4">
+              <div class="col-md-5 d-flex justify-content-center">
+                <img src="assets/images/grafik 4.png" class="object-fit-contain border blue-shadow" alt="screenshot of website devbuddy.">
+              </div>
+              <div class="col-md-7">
+                <div class="card-body p-3">
+                  <a href="https://www.roberthoracemusic.com" class="text-blue" target="blank"><h5 >Robert Horace Website</h5></a>
+                  <p class="text-blue">A static website for my music project.</p>
+                  <div class="d-flex gap-1 flex-wrap">
+                    <span class="badge rounded-pill badge-bg-blue">Ruby On Rails</span>
+                    <span class="badge rounded-pill badge-bg-blue">JavaScript</span>
+                    <span class="badge rounded-pill badge-bg-blue">PostGreSQL</span>
+                    <span class="badge rounded-pill badge-bg-blue">Heroku</span>
+                    <span class="badge rounded-pill badge-bg-blue">SCSS</span>
+                    <span class="badge rounded-pill badge-bg-blue">HTML</span>
+                    <span class="badge rounded-pill badge-bg-blue">Bootstrap</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <a href="#contact" class="arrow"><i class="fa-solid fa-angles-down fs-4 position-absolute bottom-0 start-50 translate-x-50 mb-5 text-blue next-section"></i></a>
     </section>
-    <section id="contact" class="d-flex flex-column blue-bg">
-      <div class="container d-flex flex-column justify-content-center vh-100">
-        <span class="section-header text-peach mb-5">Contact_</span>
-        <div class="d-flex flex-column align-items-center gap-3 my-5">
-          <h3 class="text-peach">Send me a message</h3>
-          <a class="text-peach fs-5" href="mailto:rbaufeld@posteo.de">rbaufeld@posteo.de</a>
-          <hr class="w-50 mx-auto border">
-          <h3 class="text-peach">Or connect here</h3>
 
-          <div class="d-flex gap-4">
-              <a href="https://github.com/RobertLikesCoding" target="blank"class="nav-link text-reset "><i class="fa-brands fa-github fs-1 text-peach"></i></a>
-              <a href="https://www.linkedin.com/in/robertbaufeld/" target="blank" class="nav-link text-reset"><i class="fa-brands fa-linkedin fs-1 text-peach"></i></a>
+    <section id="about" class="d-flex flex-column container pt-navbar">
+      <span class="section-header my-5">About Me_</span>
+      <div class="row container d-flex justify-content-center">
+        <div class="col-md-7 col-sm-10 px-4 mb-3">
+          <p class="mb-3 fs-5 fw-medium">In late 2023, I took a leap and dove headfirst into coding. After 4+ months of self-learning, I solidified my foundation with Le Wagon's intensive 6-month coding bootcamp. Now, I'm chomping at the bit to put my skills to work, building and deploying full-fledged web applications in a professional setting.<br><br>
+
+            Beyond the code, I bring a unique perspective. As a 5-year independent musician and producer, I'm no stranger to constant learning and troubleshooting. This DIY spirit translates perfectly to the world of development, where there's always more to explore.<br><br>
+
+            I'm a quick learner who thrives in a collaborative environment. I'm eager to join a dynamic team where I can contribute my skills, learn from experienced developers, and grow alongside the team. Let's build something awesome together!
+            Feel free to reach out if you're looking for a passionate and quick learner!
+          </p>
+          <h3 class="mb-3">_Tech I'm using_</h3>
+          <div class="d-flex justify-content-between mb-3">
+            <i class="fa-brands fa-js fs-1"></i>
+            <i class="fa-brands fa-html5 fs-1"></i>
+            <i class="fa-brands fa-css3-alt fs-1"></i>
+            <i class="fa-brands fa-github fs-1"></i>
+            <i class="fa-brands fa-git-alt fs-1"></i>
+            <i class="fa-brands fa-figma fs-1"></i>
+            <img class="object-fit-fit" src="assets/images/ruby.png" alt="ruby icon.">
+          </div>
+          <h3 class="mb-3">_Tech I'm learning_</h3>
+            <p class="fs-5">React, Typescript, implementing AI</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="d-flex flex-column blue-bg pt-5">
+      <div class="container">
+        <span class="section-header text-peach">Contact_</span>
+        <div class="d-flex flex-column align-items-center gap-3 my-5">
+          <h3 class="text-peach py-5">Let's get in touch!</h3>
+          <div class="row justify-content-center g-4"> <!-- Use Bootstrap's row and gap classes -->
+            <div class="col-12 col-md-auto"> <!-- Ensure full width on small screens, auto width on medium and up -->
+              <a class="peach-bg text-blue fs-5 border p-3 rounded-5 d-flex align-items-center" href="mailto:rbaufeld@posteo.de">
+                <i class="fa-solid fa-envelope me-2 fs-3"></i>rbaufeld@posteo.de
+              </a>
+            </div>
+            <div class="col-12 col-md-auto">
+              <a href="https://github.com/RobertLikesCoding" target="_blank" class="peach-bg text-blue fs-5 border p-3 rounded-5 d-flex align-items-center">
+                <i class="fa-brands fa-github fs-3 me-3"></i>GitHub
+              </a>
+            </div>
+            <div class="col-12 col-md-auto">
+              <a href="https://www.linkedin.com/in/robertbaufeld/" target="_blank" class="peach-bg text-blue fs-5 border p-3 rounded-5 d-flex align-items-center">
+                <i class="fa-brands fa-linkedin-in fs-3 me-3"></i>LinkedIn
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="blue-bg text-center text-lg-start">
-    <div class="text-center text-peach p-3">
-      © 2024 Copyright:
-      <a class="text-body text-peach" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    </div>
+  <footer class="blue-bg text-center py-3 d-flex flex-column gap-2">
+    <ul class="nav-footer d-flex justify-content-center gap-5 p-0">
+      <li class="nav-item">
+        <a class="nav-link active fs-6 text-reset fw-medium" aria-current="page" href="#">Back to top</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fs-6 text-reset fw-medium" href="#projects">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fs-6 text-reset fw-medium" href="#about">About Me</About></a></li>
+      <li class="nav-item">
+        <a class="nav-link fs-6 text-reset fw-medium" href="#contact">Contact</a>
+      </li>
+    </ul>
+    <p class="text-peach fs-6 m-0">© 2024 Robert Baufeld</p>
   </footer>
 
   <script src="assets/script.js"></script>
