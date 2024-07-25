@@ -12,31 +12,30 @@
 </head>
 <body class="peach-bg">
   <header>
-    <nav class="navbar fixed-top navbar-expand-lg peach-bg pt-4">
-      <div class="container-fluid container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="my-navbar w-100 d-flex justify-content-evenly p-0">
-            <li class="nav-item">
-              <a class="nav-link active fs-5 text-reset fw-medium" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fs-5 text-reset fw-medium" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fs-5 text-reset fw-medium" href="#about">About Me</About></a></li>
-            <li class="nav-item">
-              <a class="nav-link fs-5 text-reset fw-medium" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a href="https://github.com/RobertLikesCoding" target="blank" class="text-reset"><i class="fa-brands fa-github fs-4"></i></a>
-            </li>
-            <li class="nav-item">
-              <a href="https://www.linkedin.com/in/robertbaufeld/" target="blank" class="text-reset"><i class="fa-brands fa-linkedin fs-4"></i></a>
-            </li>
+    <nav class="container py-4 fixed-top peach-bg" id="desktop-nav">
+          <ul class="my-navbar d-flex justify-content-evenly p-0">
+            <li><a class="nav-link fs-5 text-blue fw-medium" aria-current="page" href="#">Home</a></li>
+            <li><a class="nav-link fs-5 text-blue fw-medium" href="#projects">Projects</a></li>
+            <li><a class="nav-link fs-5 text-blue fw-medium" href="#about">About Me</About></a></li>
+            <li><a class="nav-link fs-5 text-blue fw-medium" href="#contact">Contact</a></li>
+            <li><a href="https://github.com/RobertLikesCoding" target="blank" class="text-reset"><i class="fa-brands fa-github fs-4"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/robertbaufeld/" target="blank" class="text-reset"><i class="fa-brands fa-linkedin fs-4"></i></a></li>
           </ul>
+    </nav>
+    <nav id="mobile-nav" class="fixed-top">
+      <div class="mobile-menu w-100">
+        <div class="mobile-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="mobile-links">
+            <li><a class="nav-link fs-5 text-blue fw-medium" onclick="toggleMenu()" href="#">Home</a></li>
+            <li><a class="nav-link fs-5 text-blue fw-medium" onclick="toggleMenu()" href="#projects">Projects</a></li>
+            <li><a class="nav-link fs-5 text-blue fw-medium" onclick="toggleMenu()" href="#about">About Me</About></a></li>
+            <li><a class="nav-link fs-5 text-blue fw-medium" onclick="toggleMenu()" href="#contact">Contact</a></li>
+            <li><a href="https://github.com/RobertLikesCoding" target="blank" class="text-reset"><i class="fa-brands fa-github fs-4"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/robertbaufeld/" target="blank" class="text-reset"><i class="fa-brands fa-linkedin fs-4"></i></a></li>
         </div>
       </div>
     </nav>
@@ -62,7 +61,9 @@
           <div class="mb-5 card-width project-card">
             <div class="row g-4">
               <div class="col-md-5 d-flex justify-content-center">
-                <img src="assets/images/grafik 2.png" class="object-fit-contain border blue-shadow" alt="screenshot of website devbuddy.">
+                <a href="https://www.devbuddy.co" class="text-blue" target="blank">
+                  <img src="assets/images/grafik 2.png" class="object-fit-contain border blue-shadow" alt="screenshot of website devbuddy.">
+                </a>
               </div>
               <div class="col-md-7">
                 <div class="card-body p-3">
@@ -88,7 +89,9 @@
           <div class="mb-5 card-width project-card">
             <div class="row g-4">
               <div class="col-md-5 d-flex justify-content-center">
-                <img src="assets/images/grafik 3.png" class="object-fit-contain border blue-shadow" alt="screenshot of website devbuddy.">
+                <a href="https://airbnb-costumize-0a7572564e14.herokuapp.com/costumes" class="text-blue" target="blank">
+                  <img src="assets/images/grafik 3.png" class="object-fit-contain border blue-shadow" alt="screenshot of website devbuddy.">
+                </a>
               </div>
               <div class="col-md-7">
                 <div class="card-body p-3">
@@ -114,7 +117,9 @@
           <div class="mb-5 card-width project-card">
             <div class="row g-4">
               <div class="col-md-5 d-flex justify-content-center">
-                <img src="assets/images/grafik 4.png" class="object-fit-contain border blue-shadow" alt="screenshot of website devbuddy.">
+                <a href="https://www.roberthoracemusic.com" class="text-blue" target="blank">
+                  <img src="assets/images/grafik 4.png" class="object-fit-contain border blue-shadow" alt="screenshot of website devbuddy.">
+                </a>
               </div>
               <div class="col-md-7">
                 <div class="card-body p-3">

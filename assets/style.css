@@ -143,9 +143,6 @@ a {
   height: 70vh;
 }
 
-#projects {
-
-}
 #about {
   padding-bottom: 10rem;
 }
@@ -168,5 +165,101 @@ a {
 .github-repo {
   &:hover {
     font-weight: 500;
+  }
+}
+
+
+/* mobile menu */
+
+#mobile-nav {
+  display: none;
+}
+
+.mobile-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.mobile-menu.open {
+  background-color: var(--clr-secondary);
+}
+
+.mobile-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+  margin: 1rem;
+
+  span {
+    width: 100%;
+    height: 2px;
+    background-color: var(--clr-primary);
+    transition: all 0.3s ease-in-out;
+  }
+
+  span:first-child {
+    transform: none;
+  }
+
+  span:first-child {
+    opacity: 1;
+  }
+
+  span:first-child {
+    transform: none;
+  }
+}
+
+.mobile-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.mobile-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+
+.mobile-links {
+  position: absolute;
+  top: 100%;
+  background-color: var(--clr-secondary);
+  max-height: 0;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+
+  a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    transform: all 0.3s ease-in-out;
+  }
+
+  li:hover {
+    color: #000677;
+    scale: 1.1;
+  }
+}
+
+.mobile-links.open {
+  max-height: fit-content;
+  border-bottom: 4px solid var(--clr-primary);
+}
+
+
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+
+  #mobile-nav {
+    display: flex;
   }
 }

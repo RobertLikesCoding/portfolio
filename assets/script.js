@@ -22,3 +22,13 @@ arrows.forEach(arrow => {
     targetNavItem.classList.add('fw-bold');
   });
 });
+
+function toggleMenu() {
+  const links = document.querySelector('.mobile-links');
+  const icon = document.querySelector('.mobile-icon');
+  const menu = document.querySelector('.mobile-menu');
+
+  links.classList.toggle('open');
+  icon.classList.toggle('open');
+  menu.classList.toggle('open');
+}
