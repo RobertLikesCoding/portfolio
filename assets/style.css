@@ -39,7 +39,7 @@ html {
 }
 
 .section-100 {
-  height: calc(100vh - var(--nav-height) + 22px);
+  height: calc(100svh - var(--nav-height) + 22px);
 }
 
 .hero-header {
@@ -137,10 +137,13 @@ a {
   #about {
     padding-bottom: 5rem;
   }
+  #home {
+    padding-bottom: 2rem;
+  }
 }
 
 #contact {
-  height: 70vh;
+  min-height: 650px;
 }
 
 #about {
@@ -240,6 +243,10 @@ a {
     text-align: center;
     padding: 10px;
     transform: all 0.3s ease-in-out;
+  }
+
+  li {
+    list-style: none;
   }
 
   li:hover {

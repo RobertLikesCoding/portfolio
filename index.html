@@ -13,7 +13,7 @@
 <body class="peach-bg">
   <header>
     <nav class="container py-4 fixed-top peach-bg" id="desktop-nav">
-          <ul class="my-navbar d-flex justify-content-evenly p-0">
+          <ul class="my-navbar d-flex justify-content-evenly p-0 m-0">
             <li><a class="nav-link fs-5 text-blue fw-medium" aria-current="page" href="#">Home</a></li>
             <li><a class="nav-link fs-5 text-blue fw-medium" href="#projects">Projects</a></li>
             <li><a class="nav-link fs-5 text-blue fw-medium" href="#about">About Me</About></a></li>
@@ -42,7 +42,7 @@
   </header>
 
   <main>
-    <section class="container pt-navbar">
+    <section id="home" class="container pt-navbar">
       <div class="row d-flex justify-content-center align-items-center section-100">
         <div class="col-md-4 col-sm-7 col-9 d-flex justify-content-center">
           <img class="rounded-4 portrait" src="assets/images/Portrait2_more_contrast.jpg" alt="portrait of Robert Baufeld.">
@@ -168,7 +168,7 @@
       </div>
     </section>
 
-    <section id="contact" class="d-flex flex-column blue-bg pt-5">
+    <section id="contact" class="d-flex flex-column justify-content-between blue-bg pt-5">
       <div class="container">
         <span class="section-header text-peach">Contact_</span>
         <div class="d-flex flex-column align-items-center gap-3 my-5">
@@ -192,23 +192,26 @@
           </div>
         </div>
       </div>
+      <div>
+        <ul class="nav-footer d-flex justify-content-center gap-4 p-0">
+          <li class="nav-item">
+            <a class="nav-link active fs-6 text-reset fw-medium" aria-current="page" href="#">Back to top</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-6 text-reset fw-medium" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-6 text-reset fw-medium" href="#about">About Me</About></a></li>
+          <li class="nav-item">
+            <a class="nav-link fs-6 text-reset fw-medium" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
 
   <footer class="blue-bg text-center py-3 d-flex flex-column gap-2">
-    <ul class="nav-footer d-flex justify-content-center gap-5 p-0">
-      <li class="nav-item">
-        <a class="nav-link active fs-6 text-reset fw-medium" aria-current="page" href="#">Back to top</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link fs-6 text-reset fw-medium" href="#projects">Projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link fs-6 text-reset fw-medium" href="#about">About Me</About></a></li>
-      <li class="nav-item">
-        <a class="nav-link fs-6 text-reset fw-medium" href="#contact">Contact</a>
-      </li>
-    </ul>
+
     <p class="text-peach fs-6 m-0">© 2024 Robert Baufeld</p>
   </footer>
 
