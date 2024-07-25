@@ -250,7 +250,6 @@ a {
 
 .mobile-links.open {
   max-height: fit-content;
-  /* border-radius: 20px; */
   border-bottom: 4px solid var(--clr-primary);
 }
 
