@@ -8,6 +8,7 @@
   --clr-primary: #212CFF;
   --clr-secondary: #FFF5E0;
   --clr-tertiary: #212cff0d;
+  --clr-hover: #00044d;
   --bs-body-color: #212CFF !important;
   --main-font: "Roboto", sans-serif !important;
   --nav-height: 78px;
@@ -18,12 +19,8 @@ html {
   scroll-behavior: smooth;
 }
 
-.nav-item, .nav-link {
-  color: var(--clr-primary);
-
-  &:hover {
-    color: #000677;
-  }
+li .nav-link:hover {
+    color: var(--clr-hover);
 }
 
 .my-navbar {
@@ -127,18 +124,6 @@ a {
 
   img {
     max-height: 150px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #projects {
-    padding-bottom: 2rem;
-  }
-  #about {
-    padding-bottom: 5rem;
-  }
-  #home {
-    padding-bottom: 2rem;
   }
 }
 
@@ -250,7 +235,7 @@ a {
   }
 
   li:hover {
-    color: #000677;
+    color: var(--clr-hover);
     scale: 1.1;
   }
 }
@@ -268,5 +253,22 @@ a {
 
   #mobile-nav {
     display: flex;
+  }
+
+  #hero-text-container {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #projects {
+    padding-bottom: 2rem;
+  }
+  #about {
+    padding-bottom: 5rem;
+  }
+  #home {
+    padding-bottom: 2rem;
   }
 }
