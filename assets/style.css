@@ -84,6 +84,16 @@ li .nav-link:hover {
   background-color: var(--clr-primary);
 }
 
+.skill-badge {
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.25rem 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--clr-primary);
+}
+
 a {
   text-decoration: none;
 
@@ -120,10 +130,10 @@ a {
 }
 
 .card-width {
-  max-width: 800px;
+  max-width: 900px;
 
   img {
-    max-height: 150px;
+    max-width: 100%;
   }
 }
 
@@ -144,6 +154,9 @@ a {
 
 .project-card {
   transition: all 0.2s ease-in-out;
+  border: 2px solid var(--clr-primary);
+  border-radius: 10px;
+  box-shadow: 8px 8px 0 0 var(--clr-primary);
 
   &:hover {
     transform: scale(1.05);
@@ -153,6 +166,9 @@ a {
 .github-repo {
   &:hover {
     font-weight: 500;
+  }
+  &:active {
+    scale: 0.95;
   }
 }
 
