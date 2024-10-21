@@ -30,6 +30,7 @@ a {
 
   &:hover {
     color: #000677;
+    text-decoration: underline;
   }
 }
 
@@ -104,6 +105,7 @@ a {
   font-weight: medium;
   font-style: normal;
   line-height: 1.5;
+  opacity: 0;
 }
 
 /* Projects Section */
