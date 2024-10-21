@@ -1,3 +1,5 @@
+/* General */
+
 *,
 *:before,
 *:after {
@@ -23,6 +25,45 @@ li .nav-link:hover {
     color: var(--clr-hover);
 }
 
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: #000677;
+    text-decoration: underline;
+  }
+}
+
+.section-100 {
+  height: calc(100svh - var(--nav-height) + 22px);
+}
+
+/* Fonts and Colors */
+
+.blue-bg {
+  background-color: var(--clr-primary);
+}
+
+.peach-bg {
+  background-color: var(--clr-secondary);
+}
+
+.text-peach {
+  color: var(--clr-secondary);
+  text-decoration: none;
+}
+
+.text-blue {
+  color: var(--clr-primary);
+  text-decoration: none;
+}
+
+.blue-shadow {
+  box-shadow: 8px 8px 0 0 var(--clr-primary);
+}
+
+/* Navbar Section */
+
 .my-navbar {
   list-style: none;
 
@@ -35,8 +76,12 @@ li .nav-link:hover {
   padding-top: 70px;
 }
 
-.section-100 {
-  height: calc(100svh - var(--nav-height) + 22px);
+/* Hero Section */
+
+.portrait {
+  width: 90%;
+  object-fit: contain;
+  box-shadow: var(--hard-shadow);
 }
 
 .hero-header {
@@ -60,25 +105,10 @@ li .nav-link:hover {
   font-weight: medium;
   font-style: normal;
   line-height: 1.5;
+  opacity: 0;
 }
 
-.blue-bg {
-  background-color: var(--clr-primary);
-}
-
-.peach-bg {
-  background-color: var(--clr-secondary);
-}
-
-.text-peach {
-  color: var(--clr-secondary);
-  text-decoration: none;
-}
-
-.text-blue {
-  color: var(--clr-primary);
-  text-decoration: none;
-}
+/* Projects Section */
 
 .badge-bg-blue {
   background-color: var(--clr-primary);
@@ -94,61 +124,11 @@ li .nav-link:hover {
   border: 1px solid var(--clr-primary);
 }
 
-a {
-  text-decoration: none;
-
-  &:hover {
-    color: #000677;
-  }
-}
-
-.blue-shadow {
-  box-shadow: 8px 8px 0 0 var(--clr-primary);
-}
-
-.next-section {
-  transition: transform 0.1s ease-in-out;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-
-  &:active {
-    transform: translateY(0px);
-  }
-}
-
-.portrait {
-  width: 90%;
-  object-fit: contain;
-  box-shadow: var(--hard-shadow);
-}
-
-.about-box {
-  max-width: 90vw;
-  object-fit: contain;
-}
-
 .card-width {
   max-width: 900px;
 
   img {
     max-width: 100%;
-  }
-}
-
-#contact {
-  min-height: 650px;
-}
-
-#about {
-  padding-bottom: 10rem;
-}
-
-.nav-footer {
-  .nav-item, .nav-link {
-    color: var(--clr-secondary);
-    list-style: none;
   }
 }
 
@@ -172,8 +152,33 @@ a {
   }
 }
 
+/* About Section */
 
-/* mobile menu */
+.about-box {
+  max-width: 90vw;
+  object-fit: contain;
+}
+
+#about {
+  padding-bottom: 10rem;
+}
+
+/* Contact Section */
+
+#contact {
+  min-height: 650px;
+}
+
+/* Footer Section */
+
+.nav-footer {
+  .nav-item, .nav-link {
+    color: var(--clr-secondary);
+    list-style: none;
+  }
+}
+
+/* Mobile Navbar */
 
 #mobile-nav {
   display: none;
