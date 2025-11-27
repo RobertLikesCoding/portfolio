@@ -11,6 +11,12 @@
   <title>Robert.Likes.Coding</title>
 </head>
 <body class="peach-bg">
+  <dialog id="dialog" class="rounded-5 bg-light my-modal d-flex flex-column align-items-center">
+    <p style="text-align: center;">
+      Hello, you can close this modal now
+    </p>
+        <button type="button" id="closeButton" class="btn btn-primary">Close</button>
+  </dialog>
   <header>
     <nav class="py-4 fixed-top peach-bg" id="desktop-nav">
           <ul class="my-navbar d-flex justify-content-evenly p-0 m-0">
@@ -52,6 +58,9 @@
           <span class="hero-subline">Full-Stack Web Developer</span>
         </div>
         <h4 class="m-0 text-center">I like building things from code.</h4>
+      </div>
+      <div class="d-flex justify-content-center">
+        <button type="button" id="modalButton" class="btn btn-primary" hidden>Modal</button>
       </div>
     </section>
 

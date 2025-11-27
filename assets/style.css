@@ -177,6 +177,21 @@ a {
   }
 }
 
+/* Dialog for testing */
+
+.my-modal {
+  width: 25%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+dialog:not([open]) {
+  display: none !important;
+}
+
+
 /* Mobile Navbar */
 
 #mobile-nav {
@@ -265,7 +280,6 @@ a {
   border-bottom: 4px solid var(--clr-primary);
 }
 
-
 @media screen and (max-width: 1200px) {
   #desktop-nav {
     display: none;
@@ -290,5 +304,9 @@ a {
   }
   #home {
     padding-bottom: 2rem;
+  }
+
+  .my-modal {
+    width: 75%;
   }
 }
