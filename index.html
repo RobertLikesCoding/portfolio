@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +11,14 @@
   <title>Robert.Likes.Coding</title>
 </head>
 <body class="peach-bg">
-  <dialog id="dialog" class="rounded-5 bg-light my-modal d-flex flex-column align-items-center">
-    <p style="text-align: center;">
-      Hello, you can close this modal now
-    </p>
-        <button type="button" id="closeButton" class="btn btn-primary">Close</button>
-  </dialog>
   <header>
-    <nav class="py-4 fixed-top peach-bg" id="desktop-nav">
-          <ul class="my-navbar d-flex justify-content-evenly p-0 m-0">
+    <nav class="py-4 px-5 fixed-top peach-bg d-flex justify-content-between align-items-center" id="desktop-nav">
+          <button id="theme-toggle" style="cursor: pointer;" class="btn" onclick="toggleDarkMode">
+            <svg width="23" height="25" viewBox="0 0 23 25" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.5 25C16.3556 25 19.8769 23.2459 22.2098 20.3715C22.5549 19.9463 22.1786 19.3251 21.6453 19.4267C15.5807 20.5816 10.0114 15.9317 10.0114 9.80977C10.0114 6.2833 11.8992 3.04048 14.9673 1.29443C15.4403 1.02529 15.3213 0.308252 14.7839 0.208984C14.0306 0.070065 13.2661 0.000114079 12.5 0C5.60015 0 0 5.59136 0 12.5C0 19.3999 5.59136 25 12.5 25Z"/>
+            </svg>
+          </button>
+          <ul class="my-navbar d-flex gap-4 p-0 m-0 align-items-center">
             <li><a class="nav-link fs-5 text-blue fw-medium" aria-current="page" href="#">Home</a></li>
             <li><a class="nav-link fs-5 text-blue fw-medium" href="#projects">Projects</a></li>
             <li><a class="nav-link fs-5 text-blue fw-medium" href="#about">About Me</About></a></li>

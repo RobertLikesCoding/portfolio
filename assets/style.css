@@ -17,6 +17,14 @@
   --hard-shadow: 8px 8px 0 0 var(--clr-primary);
 }
 
+[data-theme="dark"] {
+    --clr-primary: #EDDAB1;
+  --clr-secondary: #1c1c30;
+  --clr-tertiary: #212cff0d;
+  --clr-hover: #FFF5E0;
+  --bs-body-color: #EDDAB1 !important;
+}
+
 html {
   scroll-behavior: smooth;
 }

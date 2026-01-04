@@ -22,22 +22,19 @@ function toggleMenu() {
   menu.classList.toggle("open");
 }
 
-const flag = "testMode";
-const params = new URLSearchParams(window.location.search);
-const testModeEnabled = params.get(flag) === "true";
+// DARK MODE TOGGLE
 
-const dialog = document.getElementById("dialog");
-const modalButton = document.getElementById("modalButton");
-const closeButton = document.getElementById("closeButton");
+const root = document.documentElement;
+const toggleBtn = document.getElementById("theme-toggle");
 
-if (testModeEnabled) {
-  modalButton.removeAttribute("hidden");
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  root.setAttribute("data-theme", savedTheme);
 }
 
-modalButton.addEventListener("click", () => {
-  dialog.showModal();
-});
-
-closeButton.addEventListener("click", () => {
-  dialog.close();
+toggleBtn.addEventListener("click", () => {
+  const theme = root.getAttribute("data-theme");
+  const nextTheme = theme === "light" ? "dark" : "light";
+  root.setAttribute("data-theme", nextTheme);
+  localStorage.setItem("theme", nextTheme);
 });
