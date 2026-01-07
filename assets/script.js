@@ -27,6 +27,8 @@ function toggleMenu() {
 const root = document.documentElement;
 const toggleBtn = document.getElementById("theme-toggle");
 const contactSection = document.getElementById("contact");
+const moonIcon = document.getElementById("moon-icon");
+const sunIcon = document.getElementById("sun-icon");
 
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme) {
@@ -39,8 +41,12 @@ toggleBtn.addEventListener("click", () => {
   // Toggle contact section manuallz since its colors are inverted
   if (nextTheme === "light") {
     contactSection.classList.remove("contact-dark");
+    sunIcon.classList.add("d-none");
+    moonIcon.classList.remove("d-none");
   } else {
     contactSection.classList.add("contact-dark");
+    sunIcon.classList.remove("d-none");
+    moonIcon.classList.add("d-none");
   }
 
   root.setAttribute("data-theme", nextTheme);
