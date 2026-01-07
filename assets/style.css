@@ -46,7 +46,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: #000677;
+    color: var(--clr-hover);
     text-decoration: underline;
   }
 }
@@ -135,6 +135,11 @@ a {
 }
 
 /* Projects Section */
+
+#projects,
+#about {
+  scroll-margin-top: 90px;
+}
 
 .badge-bg-blue {
   background-color: var(--clr-primary);
