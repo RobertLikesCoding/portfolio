@@ -26,6 +26,7 @@ function toggleMenu() {
 
 const root = document.documentElement;
 const toggleBtn = document.getElementById("theme-toggle");
+const contactSection = document.getElementById("contact");
 
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme) {
@@ -35,6 +36,13 @@ if (savedTheme) {
 toggleBtn.addEventListener("click", () => {
   const theme = root.getAttribute("data-theme");
   const nextTheme = theme === "light" ? "dark" : "light";
+  // Toggle contact section manuallz since its colors are inverted
+  if (nextTheme === "light") {
+    contactSection.classList.remove("contact-dark");
+  } else {
+    contactSection.classList.add("contact-dark");
+  }
+
   root.setAttribute("data-theme", nextTheme);
   localStorage.setItem("theme", nextTheme);
 });
