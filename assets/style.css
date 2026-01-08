@@ -26,6 +26,14 @@
   --bs-body-color: #eddab1 !important;
 }
 
+[data-theme="light"] .sun-icon {
+  display: none;
+}
+
+[data-theme="dark"] .moon-icon {
+  display: none;
+}
+
 body,
 .blue-bg,
 footer,
@@ -125,7 +133,7 @@ a {
 }
 
 .section-header {
-  font-size: clamp(4rem, 10vw, 7rem);
+  font-size: clamp(3.5rem, 10vw, 7rem);
   font-family: var(--main-font);
   font-weight: bold;
   font-style: normal;
@@ -195,10 +203,6 @@ a {
   object-fit: contain;
 }
 
-#about {
-  padding-bottom: 10rem;
-}
-
 /* Contact Section */
 
 #contact {
@@ -213,20 +217,6 @@ a {
     color: var(--clr-secondary);
     list-style: none;
   }
-}
-
-/* Dialog for testing */
-
-.my-modal {
-  width: 25%;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-dialog:not([open]) {
-  display: none !important;
 }
 
 /* Mobile Navbar */
@@ -248,14 +238,15 @@ dialog:not([open]) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 24px;
-  width: 30px;
+  height: 20px;
+  width: 28px;
   cursor: pointer;
   margin: 1rem;
 
   span {
     width: 100%;
-    height: 2px;
+    height: 3px;
+    border-radius: 5px;
     background-color: var(--clr-primary);
     transition: all 0.3s ease-in-out;
   }
@@ -317,14 +308,6 @@ dialog:not([open]) {
 }
 
 @media screen and (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
-  }
-
-  #mobile-nav {
-    display: flex;
-  }
-
   #hero-text-container {
     align-items: center;
     text-align: center;
@@ -332,16 +315,6 @@ dialog:not([open]) {
 }
 
 @media screen and (max-width: 768px) {
-  #projects {
-    padding-bottom: 2rem;
-  }
-  #about {
-    padding-bottom: 5rem;
-  }
-  #home {
-    padding-bottom: 2rem;
-  }
-
   .my-modal {
     width: 75%;
   }

@@ -25,30 +25,37 @@ function toggleMenu() {
 // DARK MODE TOGGLE
 
 const root = document.documentElement;
-const toggleBtn = document.getElementById("theme-toggle");
+const toggleButtons = document.querySelectorAll(".theme-toggle");
 const contactSection = document.getElementById("contact");
-const moonIcon = document.getElementById("moon-icon");
-const sunIcon = document.getElementById("sun-icon");
 
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme) {
   root.setAttribute("data-theme", savedTheme);
-}
 
-toggleBtn.addEventListener("click", () => {
-  const theme = root.getAttribute("data-theme");
-  const nextTheme = theme === "light" ? "dark" : "light";
-  // Toggle contact section manuallz since its colors are inverted
-  if (nextTheme === "light") {
+  if (savedTheme === "light") {
     contactSection.classList.remove("contact-dark");
-    sunIcon.classList.add("d-none");
-    moonIcon.classList.remove("d-none");
   } else {
     contactSection.classList.add("contact-dark");
-    sunIcon.classList.remove("d-none");
-    moonIcon.classList.add("d-none");
+  }
+} else {
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  root.setAttribute("data-theme", prefersDark ? "dark" : "light");
+}
+
+toggleButtons.forEach((btn) => {
+  btn.addEventListener("click", toggleTheme);
+});
+
+function toggleTheme() {
+  const theme = root.getAttribute("data-theme");
+  const nextTheme = theme === "light" ? "dark" : "light";
+  // Toggle contact section manually since its colors are inverted
+  if (nextTheme === "light") {
+    contactSection.classList.remove("contact-dark");
+  } else {
+    contactSection.classList.add("contact-dark");
   }
 
   root.setAttribute("data-theme", nextTheme);
   localStorage.setItem("theme", nextTheme);
-});
+}
