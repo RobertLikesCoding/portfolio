@@ -22,22 +22,45 @@ function toggleMenu() {
   menu.classList.toggle("open");
 }
 
-const flag = "testMode";
-const params = new URLSearchParams(window.location.search);
-const testModeEnabled = params.get(flag) === "true";
+// DARK MODE TOGGLE
 
-const dialog = document.getElementById("dialog");
-const modalButton = document.getElementById("modalButton");
-const closeButton = document.getElementById("closeButton");
+const root = document.documentElement;
+const toggleButtons = document.querySelectorAll(".theme-toggle");
+const contactSection = document.getElementById("contact");
 
-if (testModeEnabled) {
-  modalButton.removeAttribute("hidden");
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  root.setAttribute("data-theme", savedTheme);
+
+  if (savedTheme === "light") {
+    contactSection.classList.remove("contact-dark");
+  } else {
+    contactSection.classList.add("contact-dark");
+  }
+} else {
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  root.setAttribute("data-theme", prefersDark ? "dark" : "light");
 }
 
-modalButton.addEventListener("click", () => {
-  dialog.showModal();
+toggleButtons.forEach((btn) => {
+  btn.addEventListener("click", toggleTheme);
 });
 
-closeButton.addEventListener("click", () => {
-  dialog.close();
-});
+function toggleTheme() {
+  const theme = root.getAttribute("data-theme");
+  const nextTheme = theme === "light" ? "dark" : "light";
+  // Toggle contact section manually since its colors are inverted
+  if (nextTheme === "light") {
+    contactSection.classList.remove("contact-dark");
+  } else {
+    contactSection.classList.add("contact-dark");
+  }
+
+  root.setAttribute("data-theme", nextTheme);
+  localStorage.setItem("theme", nextTheme);
+}
+
+// Footer Copyright Date
+const footerNote = document.getElementById("copyright");
+const currentYear = new Date(Date.now()).getFullYear();
+footerNote.innerText = `© ${currentYear} Robert Baufeld`;

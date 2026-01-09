@@ -1,87 +1,294 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-  <title>Robert.Likes.Coding</title>
-</head>
-<body class="peach-bg">
-  <dialog id="dialog" class="rounded-5 bg-light my-modal d-flex flex-column align-items-center">
-    <p style="text-align: center;">
-      Hello, you can close this modal now
-    </p>
-        <button type="button" id="closeButton" class="btn btn-primary">Close</button>
-  </dialog>
-  <header>
-    <nav class="py-4 fixed-top peach-bg" id="desktop-nav">
-          <ul class="my-navbar d-flex justify-content-evenly p-0 m-0">
-            <li><a class="nav-link fs-5 text-blue fw-medium" aria-current="page" href="#">Home</a></li>
-            <li><a class="nav-link fs-5 text-blue fw-medium" href="#projects">Projects</a></li>
-            <li><a class="nav-link fs-5 text-blue fw-medium" href="#about">About Me</About></a></li>
-            <li><a class="nav-link fs-5 text-blue fw-medium" href="#contact">Contact</a></li>
-            <li><a href="https://github.com/RobertLikesCoding" target="blank" class="text-reset"><i class="fa-brands fa-github fs-4"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/robertbaufeld/" target="blank" class="text-reset"><i class="fa-brands fa-linkedin fs-4"></i></a></li>
-          </ul>
-    </nav>
-    <nav id="mobile-nav" class="fixed-top">
-      <div class="mobile-menu w-100">
-        <div class="mobile-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="mobile-links">
-            <li><a class="nav-link fs-5 text-blue fw-medium" onclick="toggleMenu()" href="#">Home</a></li>
-            <li><a class="nav-link fs-5 text-blue fw-medium" onclick="toggleMenu()" href="#projects">Projects</a></li>
-            <li><a class="nav-link fs-5 text-blue fw-medium" onclick="toggleMenu()" href="#about">About Me</About></a></li>
-            <li><a class="nav-link fs-5 text-blue fw-medium" onclick="toggleMenu()" href="#contact">Contact</a></li>
-            <li><a href="https://github.com/RobertLikesCoding" target="blank" class="text-reset"><i class="fa-brands fa-github fs-4"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/robertbaufeld/" target="blank" class="text-reset"><i class="fa-brands fa-linkedin fs-4"></i></a></li>
-        </div>
-      </div>
-    </nav>
-  </header>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Robert.Likes.Coding</title>
+  </head>
+  <body class="peach-bg">
+    <header>
+      <nav
+        class="py-4 px-5 fixed-top peach-bg d-md-flex d-none justify-content-between align-items-center"
+        id="desktop-nav"
+      >
+        <button
+          style="cursor: pointer"
+          class="btn theme-toggle"
+          aria-label="Toggle dark mode"
+          aria-pressed="false"
+        >
+          <div class="theme-icon moon-icon">
+            <svg
+              width="23"
+              height="25"
+              viewBox="0 0 23 25"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.5 25C16.3556 25 19.8769 23.2459 22.2098 20.3715C22.5549 19.9463 22.1786 19.3251 21.6453 19.4267C15.5807 20.5816 10.0114 15.9317 10.0114 9.80977C10.0114 6.2833 11.8992 3.04048 14.9673 1.29443C15.4403 1.02529 15.3213 0.308252 14.7839 0.208984C14.0306 0.070065 13.2661 0.000114079 12.5 0C5.60015 0 0 5.59136 0 12.5C0 19.3999 5.59136 25 12.5 25Z"
+              />
+            </svg>
+          </div>
 
-  <main>
-    <section id="home" class="container pt-navbar">
-      <div class="row d-flex justify-content-center align-items-center section-100">
-        <div class="col-md-4 col-sm-7 col-9 d-flex justify-content-center">
-          <img class="rounded-4 portrait" src="assets/images/Portrait2_more_contrast.webp" alt="portrait of Robert Baufeld.">
-        </div>
-        <div id="hero-text-container" class="col-md-5 col-sm-7 col-10 d-flex flex-column justify-content-between">
-          <span class="hero-header">Robert <br>Baufeld</span>
-          <span class="hero-subline">Full-Stack Web Developer</span>
-        </div>
-        <h4 class="m-0 text-center">I like building things from code.</h4>
-      </div>
-      <div class="d-flex justify-content-center">
-        <button type="button" id="modalButton" class="btn btn-primary" hidden>Modal</button>
-      </div>
-    </section>
+          <div class="theme-icon sun-icon">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_2004_48)">
+                <path
+                  d="M19 12C19 13.8565 18.2625 15.637 16.9497 16.9497C15.637 18.2625 13.8565 19 12 19C10.1435 19 8.36301 18.2625 7.05025 16.9497C5.7375 15.637 5 13.8565 5 12C5 10.1435 5.7375 8.36301 7.05025 7.05025C8.36301 5.7375 10.1435 5 12 5C13.8565 5 15.637 5.7375 16.9497 7.05025C18.2625 8.36301 19 10.1435 19 12Z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 0C12.222 0 12.435 0.0882058 12.592 0.245213C12.749 0.40222 12.8372 0.615168 12.8372 0.837209V1.95349C12.8372 2.17553 12.749 2.38848 12.592 2.54548C12.435 2.70249 12.222 2.7907 12 2.7907C11.778 2.7907 11.565 2.70249 11.408 2.54548C11.251 2.38848 11.1628 2.17553 11.1628 1.95349V0.837209C11.1628 0.615168 11.251 0.40222 11.408 0.245213C11.565 0.0882058 11.778 0 12 0ZM3.51516 3.51516C3.67214 3.35838 3.88493 3.27032 4.10679 3.27032C4.32865 3.27032 4.54144 3.35838 4.69842 3.51516L5.13712 3.95274C5.2897 4.11057 5.37418 4.32201 5.37238 4.54153C5.37058 4.76104 5.28263 4.97107 5.12748 5.12637C4.97232 5.28167 4.76238 5.36982 4.54287 5.37183C4.32335 5.37384 4.11183 5.28955 3.95386 5.13712L3.51516 4.69842C3.35838 4.54144 3.27032 4.32865 3.27032 4.10679C3.27032 3.88493 3.35838 3.67214 3.51516 3.51516ZM20.4848 3.51516C20.6416 3.67214 20.7297 3.88493 20.7297 4.10679C20.7297 4.32865 20.6416 4.54144 20.4848 4.69842L20.0461 5.13712C19.8874 5.285 19.6775 5.36551 19.4606 5.36168C19.2437 5.35786 19.0368 5.26999 18.8834 5.1166C18.73 4.96321 18.6421 4.75627 18.6383 4.53937C18.6345 4.32248 18.715 4.11257 18.8629 3.95386L19.3016 3.51516C19.4586 3.35838 19.6713 3.27032 19.8932 3.27032C20.1151 3.27032 20.3279 3.35838 20.4848 3.51516ZM0 12C0 11.778 0.0882058 11.565 0.245213 11.408C0.40222 11.251 0.615168 11.1628 0.837209 11.1628H1.95349C2.17553 11.1628 2.38848 11.251 2.54548 11.408C2.70249 11.565 2.7907 11.778 2.7907 12C2.7907 12.222 2.70249 12.435 2.54548 12.592C2.38848 12.749 2.17553 12.8372 1.95349 12.8372H0.837209C0.615168 12.8372 0.40222 12.749 0.245213 12.592C0.0882058 12.435 0 12.222 0 12ZM21.2093 12C21.2093 11.778 21.2975 11.565 21.4545 11.408C21.6115 11.251 21.8245 11.1628 22.0465 11.1628H23.1628C23.3848 11.1628 23.5978 11.251 23.7548 11.408C23.9118 11.565 24 11.778 24 12C24 12.222 23.9118 12.435 23.7548 12.592C23.5978 12.749 23.3848 12.8372 23.1628 12.8372H22.0465C21.8245 12.8372 21.6115 12.749 21.4545 12.592C21.2975 12.435 21.2093 12.222 21.2093 12ZM18.8629 18.8629C19.0199 18.7061 19.2327 18.618 19.4545 18.618C19.6764 18.618 19.8892 18.7061 20.0461 18.8629L20.4848 19.3016C20.5671 19.3782 20.6331 19.4707 20.6788 19.5734C20.7246 19.6761 20.7492 19.7869 20.7512 19.8993C20.7532 20.0117 20.7325 20.1234 20.6904 20.2276C20.6483 20.3319 20.5856 20.4266 20.5061 20.5061C20.4266 20.5856 20.3319 20.6483 20.2276 20.6904C20.1234 20.7325 20.0117 20.7532 19.8993 20.7512C19.7869 20.7492 19.6761 20.7246 19.5734 20.6788C19.4707 20.6331 19.3782 20.5671 19.3016 20.4848L18.8629 20.0461C18.7061 19.8892 18.618 19.6764 18.618 19.4545C18.618 19.2327 18.7061 19.0199 18.8629 18.8629ZM5.13712 18.8629C5.2939 19.0199 5.38196 19.2327 5.38196 19.4545C5.38196 19.6764 5.2939 19.8892 5.13712 20.0461L4.69842 20.4848C4.62177 20.5671 4.52934 20.6331 4.42665 20.6788C4.32395 20.7246 4.21309 20.7492 4.10068 20.7512C3.98826 20.7532 3.8766 20.7325 3.77236 20.6904C3.66811 20.6483 3.57341 20.5856 3.49391 20.5061C3.41441 20.4266 3.35174 20.3319 3.30963 20.2276C3.26752 20.1234 3.24684 20.0117 3.24883 19.8993C3.25081 19.7869 3.27542 19.6761 3.32117 19.5734C3.36693 19.4707 3.43291 19.3782 3.51516 19.3016L3.95274 18.8629C4.03049 18.7851 4.12281 18.7234 4.22442 18.6813C4.32603 18.6392 4.43494 18.6175 4.54493 18.6175C4.65492 18.6175 4.76383 18.6392 4.86544 18.6813C4.96705 18.7234 5.05937 18.7851 5.13712 18.8629ZM12 21.2093C12.222 21.2093 12.435 21.2975 12.592 21.4545C12.749 21.6115 12.8372 21.8245 12.8372 22.0465V23.1628C12.8372 23.3848 12.749 23.5978 12.592 23.7548C12.435 23.9118 12.222 24 12 24C11.778 24 11.565 23.9118 11.408 23.7548C11.251 23.5978 11.1628 23.3848 11.1628 23.1628V22.0465C11.1628 21.8245 11.251 21.6115 11.408 21.4545C11.565 21.2975 11.778 21.2093 12 21.2093Z"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_2004_48">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </button>
+        <ul class="my-navbar d-flex gap-4 p-0 m-0 align-items-center">
+          <li>
+            <a
+              class="nav-link fs-5 text-blue fw-medium"
+              aria-current="page"
+              href="#"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a class="nav-link fs-5 text-blue fw-medium" href="#projects"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a class="nav-link fs-5 text-blue fw-medium" href="#about"
+              >About Me</a
+            >
+          </li>
+          <li>
+            <a class="nav-link fs-5 text-blue fw-medium" href="#contact"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/RobertLikesCoding"
+              target="blank"
+              class="text-reset"
+              ><i class="fa-brands fa-github fs-4"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/robertbaufeld/"
+              target="blank"
+              class="text-reset"
+              ><i class="fa-brands fa-linkedin fs-4"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
 
-    <span class="section-header ms-3">Projects_</span>
-    <section id="projects" class="d-flex flex-column container pt-navbar mb-5">
-        <div class="d-flex flex-column justify-content-center align-items-center py-3">
+      <nav
+        id="mobile-nav"
+        class="fixed-top d-flex d-md-none justify-content-between peach-bg"
+      >
+        <button
+          style="cursor: pointer"
+          class="btn theme-toggle"
+          aria-label="Toggle dark mode"
+          aria-pressed="false"
+        >
+          <div class="theme-icon moon-icon">
+            <svg
+              width="23"
+              height="25"
+              viewBox="0 0 23 25"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.5 25C16.3556 25 19.8769 23.2459 22.2098 20.3715C22.5549 19.9463 22.1786 19.3251 21.6453 19.4267C15.5807 20.5816 10.0114 15.9317 10.0114 9.80977C10.0114 6.2833 11.8992 3.04048 14.9673 1.29443C15.4403 1.02529 15.3213 0.308252 14.7839 0.208984C14.0306 0.070065 13.2661 0.000114079 12.5 0C5.60015 0 0 5.59136 0 12.5C0 19.3999 5.59136 25 12.5 25Z"
+              />
+            </svg>
+          </div>
 
+          <div class="theme-icon sun-icon">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_2004_48)">
+                <path
+                  d="M19 12C19 13.8565 18.2625 15.637 16.9497 16.9497C15.637 18.2625 13.8565 19 12 19C10.1435 19 8.36301 18.2625 7.05025 16.9497C5.7375 15.637 5 13.8565 5 12C5 10.1435 5.7375 8.36301 7.05025 7.05025C8.36301 5.7375 10.1435 5 12 5C13.8565 5 15.637 5.7375 16.9497 7.05025C18.2625 8.36301 19 10.1435 19 12Z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 0C12.222 0 12.435 0.0882058 12.592 0.245213C12.749 0.40222 12.8372 0.615168 12.8372 0.837209V1.95349C12.8372 2.17553 12.749 2.38848 12.592 2.54548C12.435 2.70249 12.222 2.7907 12 2.7907C11.778 2.7907 11.565 2.70249 11.408 2.54548C11.251 2.38848 11.1628 2.17553 11.1628 1.95349V0.837209C11.1628 0.615168 11.251 0.40222 11.408 0.245213C11.565 0.0882058 11.778 0 12 0ZM3.51516 3.51516C3.67214 3.35838 3.88493 3.27032 4.10679 3.27032C4.32865 3.27032 4.54144 3.35838 4.69842 3.51516L5.13712 3.95274C5.2897 4.11057 5.37418 4.32201 5.37238 4.54153C5.37058 4.76104 5.28263 4.97107 5.12748 5.12637C4.97232 5.28167 4.76238 5.36982 4.54287 5.37183C4.32335 5.37384 4.11183 5.28955 3.95386 5.13712L3.51516 4.69842C3.35838 4.54144 3.27032 4.32865 3.27032 4.10679C3.27032 3.88493 3.35838 3.67214 3.51516 3.51516ZM20.4848 3.51516C20.6416 3.67214 20.7297 3.88493 20.7297 4.10679C20.7297 4.32865 20.6416 4.54144 20.4848 4.69842L20.0461 5.13712C19.8874 5.285 19.6775 5.36551 19.4606 5.36168C19.2437 5.35786 19.0368 5.26999 18.8834 5.1166C18.73 4.96321 18.6421 4.75627 18.6383 4.53937C18.6345 4.32248 18.715 4.11257 18.8629 3.95386L19.3016 3.51516C19.4586 3.35838 19.6713 3.27032 19.8932 3.27032C20.1151 3.27032 20.3279 3.35838 20.4848 3.51516ZM0 12C0 11.778 0.0882058 11.565 0.245213 11.408C0.40222 11.251 0.615168 11.1628 0.837209 11.1628H1.95349C2.17553 11.1628 2.38848 11.251 2.54548 11.408C2.70249 11.565 2.7907 11.778 2.7907 12C2.7907 12.222 2.70249 12.435 2.54548 12.592C2.38848 12.749 2.17553 12.8372 1.95349 12.8372H0.837209C0.615168 12.8372 0.40222 12.749 0.245213 12.592C0.0882058 12.435 0 12.222 0 12ZM21.2093 12C21.2093 11.778 21.2975 11.565 21.4545 11.408C21.6115 11.251 21.8245 11.1628 22.0465 11.1628H23.1628C23.3848 11.1628 23.5978 11.251 23.7548 11.408C23.9118 11.565 24 11.778 24 12C24 12.222 23.9118 12.435 23.7548 12.592C23.5978 12.749 23.3848 12.8372 23.1628 12.8372H22.0465C21.8245 12.8372 21.6115 12.749 21.4545 12.592C21.2975 12.435 21.2093 12.222 21.2093 12ZM18.8629 18.8629C19.0199 18.7061 19.2327 18.618 19.4545 18.618C19.6764 18.618 19.8892 18.7061 20.0461 18.8629L20.4848 19.3016C20.5671 19.3782 20.6331 19.4707 20.6788 19.5734C20.7246 19.6761 20.7492 19.7869 20.7512 19.8993C20.7532 20.0117 20.7325 20.1234 20.6904 20.2276C20.6483 20.3319 20.5856 20.4266 20.5061 20.5061C20.4266 20.5856 20.3319 20.6483 20.2276 20.6904C20.1234 20.7325 20.0117 20.7532 19.8993 20.7512C19.7869 20.7492 19.6761 20.7246 19.5734 20.6788C19.4707 20.6331 19.3782 20.5671 19.3016 20.4848L18.8629 20.0461C18.7061 19.8892 18.618 19.6764 18.618 19.4545C18.618 19.2327 18.7061 19.0199 18.8629 18.8629ZM5.13712 18.8629C5.2939 19.0199 5.38196 19.2327 5.38196 19.4545C5.38196 19.6764 5.2939 19.8892 5.13712 20.0461L4.69842 20.4848C4.62177 20.5671 4.52934 20.6331 4.42665 20.6788C4.32395 20.7246 4.21309 20.7492 4.10068 20.7512C3.98826 20.7532 3.8766 20.7325 3.77236 20.6904C3.66811 20.6483 3.57341 20.5856 3.49391 20.5061C3.41441 20.4266 3.35174 20.3319 3.30963 20.2276C3.26752 20.1234 3.24684 20.0117 3.24883 19.8993C3.25081 19.7869 3.27542 19.6761 3.32117 19.5734C3.36693 19.4707 3.43291 19.3782 3.51516 19.3016L3.95274 18.8629C4.03049 18.7851 4.12281 18.7234 4.22442 18.6813C4.32603 18.6392 4.43494 18.6175 4.54493 18.6175C4.65492 18.6175 4.76383 18.6392 4.86544 18.6813C4.96705 18.7234 5.05937 18.7851 5.13712 18.8629ZM12 21.2093C12.222 21.2093 12.435 21.2975 12.592 21.4545C12.749 21.6115 12.8372 21.8245 12.8372 22.0465V23.1628C12.8372 23.3848 12.749 23.5978 12.592 23.7548C12.435 23.9118 12.222 24 12 24C11.778 24 11.565 23.9118 11.408 23.7548C11.251 23.5978 11.1628 23.3848 11.1628 23.1628V22.0465C11.1628 21.8245 11.251 21.6115 11.408 21.4545C11.565 21.2975 11.778 21.2093 12 21.2093Z"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_2004_48">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </button>
+        <div class="mobile-menu">
+          <div class="mobile-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+      <div class="mobile-links">
+        <li>
+          <a
+            class="nav-link fs-5 text-blue fw-medium"
+            onclick="toggleMenu()"
+            href="#"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            class="nav-link fs-5 text-blue fw-medium"
+            onclick="toggleMenu()"
+            href="#projects"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a
+            class="nav-link fs-5 text-blue fw-medium"
+            onclick="toggleMenu()"
+            href="#about"
+            >About Me</a
+          >
+        </li>
+        <li>
+          <a
+            class="nav-link fs-5 text-blue fw-medium"
+            onclick="toggleMenu()"
+            href="#contact"
+            >Contact</a
+          >
+        </li>
+        <div class="d-flex py-3">
+          <a
+            href="https://github.com/Robertdiv class="
+            target="blank"
+            class="text-reset"
+            ><i class="fa-brands fa-github fs-4"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/robertbaufeld/"
+            target="blank"
+            class="text-reset"
+            ><i class="fa-brands fa-linkedin fs-4"></i
+          ></a>
+        </li>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="container pt-navbar mb-5">
+        <div
+          class="row d-flex justify-content-center align-items-center section-100"
+        >
+          <div class="col-md-4 col-sm-7 col-9 d-flex justify-content-center">
+            <img
+              class="rounded-4 portrait"
+              src="assets/images/Portrait2_more_contrast.webp"
+              alt="portrait of Robert Baufeld."
+            />
+          </div>
+          <div
+            id="hero-text-container"
+            class="col-md-5 col-sm-7 col-10 d-flex flex-column justify-content-between"
+          >
+            <h1 class="hero-header">Robert <br />Baufeld</h1>
+            <span class="hero-subline">Full-Stack Web Developer</span>
+          </div>
+          <h4 class="m-0 text-center">I like building things from code.</h4>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="button" id="modalButton" class="btn btn-primary" hidden>
+            Modal
+          </button>
+        </div>
+      </section>
+
+      <h2 id="projects" class="section-header ms-3">Projects_</h2>
+      <section class="d-flex flex-column container pt-5 mb-5">
+        <div
+          class="d-flex flex-column justify-content-center align-items-center py-3"
+        >
           <div class="mb-5 card-width project-card w-100 p-2">
             <div class="row g-2">
               <div class="col-md-6 d-flex justify-content-center">
-                <a href="https://rlc-playlist-creator.netlify.app/" class="text-blue" target="blank">
-                  <img src="assets/images/playlistFrame.png" class="object-fit-contain img-large" alt="screenshot of website.">
+                <a
+                  href="https://rlc-playlist-creator.netlify.app/"
+                  class="text-blue"
+                  target="blank"
+                >
+                  <img
+                    src="assets/images/playlistFrame.png"
+                    class="object-fit-contain img-large"
+                    alt="screenshot of website."
+                  />
                 </a>
               </div>
               <div class="col-md-6">
                 <div class="card-body p-2">
                   <div class="d-flex justify-content-between">
-                    <a href="https://rlc-playlist-creator.netlify.app/" class="text-blue" target="blank"><h5>Spotify Playlist Creator</h5></a>
-                    <a href="https://github.com/RobertLikesCoding/Playlist-Creator" class="text-blue github-repo" target="blank"><i class="fa-brands fa-github pe-1"></i>Github Repo</a>
+                    <a
+                      href="https://rlc-playlist-creator.netlify.app/"
+                      class="text-blue"
+                      target="blank"
+                      ><h5>Spotify Playlist Creator</h5></a
+                    >
+                    <a
+                      href="https://github.com/RobertLikesCoding/Playlist-Creator"
+                      class="text-blue github-repo"
+                      target="blank"
+                      ><i class="fa-brands fa-github pe-1"></i>Github Repo</a
+                    >
                   </div>
-                  <p class="text-blue">A React Project using the Spotify API to search for music and create playlists.</p>
+                  <p class="text-blue">
+                    A React Project using the Spotify API to search for music
+                    and create playlists.
+                  </p>
                   <div class="d-flex gap-2 flex-wrap">
                     <span class="skill-badge">React</span>
                     <span class="skill-badge">JavaScript</span>
@@ -94,21 +301,43 @@
             </div>
           </div>
 
-
           <div class="mb-5 card-width project-card w-100 p-2">
             <div class="row g-2">
-              <div class="col-md-6 d-flex justify-content-center align-items-center">
-                <a href="https://www.devbuddy.co" class="text-blue" target="blank">
-                  <img src="assets/images/devBuddyFrame.png" class="object-fit-contain img-large" alt="screenshot of website.">
+              <div
+                class="col-md-6 d-flex justify-content-center align-items-center"
+              >
+                <a
+                  href="https://www.devbuddy.co"
+                  class="text-blue"
+                  target="blank"
+                >
+                  <img
+                    src="assets/images/devBuddyFrame.png"
+                    class="object-fit-contain img-large"
+                    alt="screenshot of website."
+                  />
                 </a>
               </div>
               <div class="col-md-6">
                 <div class="card-body p-2">
                   <div class="d-flex justify-content-between">
-                    <a href="https://www.devbuddy.co" class="text-blue" target="blank"><h5>Devbuddy</h5></a>
-                    <a href="https://github.com/RobertLikesCoding/Playlist-Creator" class="text-blue github-repo" target="blank"><i class="fa-brands fa-github pe-1"></i>Github Repo</a>
+                    <a
+                      href="https://www.devbuddy.co"
+                      class="text-blue"
+                      target="blank"
+                      ><h5>Devbuddy</h5></a
+                    >
+                    <a
+                      href="https://github.com/RobertLikesCoding/Playlist-Creator"
+                      class="text-blue github-repo"
+                      target="blank"
+                      ><i class="fa-brands fa-github pe-1"></i>Github Repo</a
+                    >
                   </div>
-                  <p class="text-blue">A social platform for scheduling learning sessions with other code enthusiasts.</p>
+                  <p class="text-blue">
+                    A social platform for scheduling learning sessions with
+                    other code enthusiasts.
+                  </p>
                   <div class="d-flex gap-2 flex-wrap">
                     <span class="skill-badge">Ruby On Rails</span>
                     <span class="skill-badge">JavaScript</span>
@@ -126,17 +355,36 @@
           <div class="mb-5 card-width project-card w-100 p-2">
             <div class="row g-2">
               <div class="col-md-6 d-flex justify-content-center">
-                <a href="https://airbnb-costumize-0a7572564e14.herokuapp.com/costumes" class="text-blue" target="blank">
-                  <img src="assets/images/costumizeFrame.png" class="object-fit-contain" alt="screenshot of website.">
+                <a
+                  href="https://airbnb-costumize-0a7572564e14.herokuapp.com/costumes"
+                  class="text-blue"
+                  target="blank"
+                >
+                  <img
+                    src="assets/images/costumizeFrame.png"
+                    class="object-fit-contain"
+                    alt="screenshot of website."
+                  />
                 </a>
               </div>
               <div class="col-md-6">
                 <div class="card-body p-2">
                   <div class="d-flex justify-content-between">
-                    <a href="https://airbnb-costumize-0a7572564e14.herokuapp.com/costumes" class="text-blue" target="blank"><h5 >Costumize</h5></a>
-                    <a href="https://github.com/thedavidwenk/costumize" class="text-blue github-repo"><i class="fa-brands fa-github pe-1"></i>Github Repo</a>
+                    <a
+                      href="https://airbnb-costumize-0a7572564e14.herokuapp.com/costumes"
+                      class="text-blue"
+                      target="blank"
+                      ><h5>Costumize</h5></a
+                    >
+                    <a
+                      href="https://github.com/thedavidwenk/costumize"
+                      class="text-blue github-repo"
+                      ><i class="fa-brands fa-github pe-1"></i>Github Repo</a
+                    >
                   </div>
-                  <p class="text-blue">An AirBnB clone for renting and renting out costumes.</p>
+                  <p class="text-blue">
+                    An AirBnB clone for renting and renting out costumes.
+                  </p>
                   <div class="d-flex gap-1 flex-wrap">
                     <span class="skill-badge">Ruby On Rails</span>
                     <span class="skill-badge">JavaScript</span>
@@ -154,14 +402,29 @@
           <div class="mb-5 card-width project-card w-100 p-2">
             <div class="row g-2">
               <div class="col-md-6 d-flex justify-content-center">
-                <a href="https://www.roberthoracemusic.com" class="text-blue" target="blank">
-                  <img src="assets/images/horaceFrame.png" class="object-fit-contain" alt="screenshot of website.">
+                <a
+                  href="https://www.roberthoracemusic.com"
+                  class="text-blue"
+                  target="blank"
+                >
+                  <img
+                    src="assets/images/horaceFrame.png"
+                    class="object-fit-contain"
+                    alt="screenshot of website."
+                  />
                 </a>
               </div>
               <div class="col-md-6">
                 <div class="card-body p-2">
-                  <a href="https://www.roberthoracemusic.com" class="text-blue" target="blank"><h5 >Robert Horace Website</h5></a>
-                  <p class="text-blue">A static website for my music project.</p>
+                  <a
+                    href="https://www.roberthoracemusic.com"
+                    class="text-blue"
+                    target="blank"
+                    ><h5>Robert Horace Website</h5></a
+                  >
+                  <p class="text-blue">
+                    A static website for my music project.
+                  </p>
                   <div class="d-flex gap-1 flex-wrap">
                     <span class="skill-badge">Wordpress</span>
                     <span class="skill-badge">Elementor</span>
@@ -171,97 +434,151 @@
             </div>
           </div>
         </div>
-    </section>
+      </section>
 
-    <span class="section-header ms-3 mb-5">About Me_</span>
-    <section id="about" class="d-flex flex-column align-items-center pt-navbar">
-      <div class="row container d-flex justify-content-center">
-        <div class="col-md-9 col-sm-10 px-2 mb-3">
-          <p class="mb-5 fs-5 fw-medium">Every path I’ve taken - whether it’s been in the kitchen, on stage as a musician, or now behind a screen coding - has shaped the way I solve problems.
-            After spending 10 years as a chef, I know what it's like to manage chaos and stay calm under pressure. As head chef, I learned how to structure my work while staying adaptable to the surprises that each day inevitably brought. <br><br>
+      <h2 id="about" class="section-header ms-3 mb-5">About Me_</h2>
+      <section class="d-flex flex-column align-items-center">
+        <div class="row container d-flex justify-content-center">
+          <div class="col-md-9 col-sm-10 px-2 mb-5">
+            <p class="mb-5 fs-5">
+              Every path I’ve taken - whether it’s been in the kitchen, on stage
+              as a musician, or now behind a screen coding - has shaped the way
+              I solve problems. After spending 10 years as a chef, I know what
+              it's like to manage chaos and stay calm under pressure. As head
+              chef, I learned how to structure my work while staying adaptable
+              to the surprises that each day inevitably brought. <br /><br />
 
-            For the past five years, I’ve been producing my own music as an independent artist. In the ever-shifting landscape of the music industry, I learned to teach myself new skills and constantly adapt. In a way, music prepared me for web development. Producing a song from scratch is a bit like building an app - both require creativity, patience, and a willingness to constantly improve.<br><br>
+              For the past five years, I’ve been producing my own music as an
+              independent artist. In the ever-shifting landscape of the music
+              industry, I learned to teach myself new skills and constantly
+              adapt. In a way, music prepared me for web development. Producing
+              a song from scratch is a bit like building an app - both require
+              creativity, patience, and a willingness to constantly improve.<br /><br />
 
-            My dive into coding in 2023 was unexpected. I never took myself for someone who could be a programmer until I started console-logging my first "Hello World". Four months of curious self-studying later I signed up for a six-month Full Stack Web Development bootcamp. This is where my journey really started and how I discovered my passion for frontend development. <strong>It’s that blend of creativity and problem-solving that gets me excited.</strong><br><br>
+              My dive into coding in 2023 was unexpected. I never took myself
+              for someone who could be a programmer until I started
+              console-logging my first "Hello World". Four months of curious
+              self-studying later I signed up for a six-month Full Stack Web
+              Development bootcamp. This is where my journey really started and
+              how I discovered my passion for frontend development.
+              <strong
+                >It’s that blend of creativity and problem-solving that gets me
+                excited.</strong
+              ><br /><br />
 
-            I’m ready for the next chapter to take all of these experiences and channel them into creating web experiences that people enjoy.
-          </p>
-          <h3 class="mb-3">Tech I'm using:</h3>
-          <div class="d-flex justify-content-between mb-3 flex-wrap">
-            <ul class="fs-5">
-              <li>HTML</li>
-              <li>CSS/SCSS</li>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-            </ul>
-            <ul class="fs-5">
-              <li>React</li>
-              <li>Figma</li>
-              <li>SQL</li>
-              <li>Ruby On Rails</li>
-            </ul>
-            <ul class="fs-5">
-              <li>Heroku</li>
-              <li>Wordpress</li>
-              <li>Git/GitHub</li>
-            </ul>
-
-          </div>
-          <h3 class="mb-3">Currently learning:</h3>
-            <p class="fs-5">React | Typescript</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="d-flex flex-column justify-content-between blue-bg pt-5">
-      <span class="section-header text-peach ms-3">Contact_</span>
-      <div class="container">
-        <div class="d-flex flex-column align-items-center gap-3 my-5">
-          <h3 class="text-peach py-5">Let's get in touch!</h3>
-          <div class="row justify-content-center g-4"> <!-- Use Bootstrap's row and gap classes -->
-            <div class="col-12 col-md-auto"> <!-- Ensure full width on small screens, auto width on medium and up -->
-              <a class="peach-bg text-blue fs-5 border p-3 rounded-5 d-flex align-items-center" href="mailto:rbaufeld@posteo.de">
-                <i class="fa-solid fa-envelope me-2 fs-3"></i>rbaufeld@posteo.de
-              </a>
+              I’m ready for the next chapter to take all of these experiences
+              and channel them into creating web experiences that people enjoy.
+            </p>
+            <h3 class="mb-3">Tech I'm using:</h3>
+            <div class="d-flex justify-content-between mb-3 flex-wrap">
+              <ul class="fs-6">
+                <li>HTML</li>
+                <li>CSS/SCSS</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+              </ul>
+              <ul class="fs-6">
+                <li>VueJS / Nuxt</li>
+                <li>React</li>
+                <li>Figma</li>
+                <li>Ruby On Rails</li>
+              </ul>
+              <ul class="fs-6">
+                <li>Wordpress</li>
+                <li>Docker</li>
+                <li>Git/GitHub</li>
+              </ul>
             </div>
-            <div class="col-12 col-md-auto">
-              <a href="https://github.com/RobertLikesCoding" target="_blank" class="peach-bg text-blue fs-5 border p-3 rounded-5 d-flex align-items-center">
-                <i class="fa-brands fa-github fs-3 me-3"></i>GitHub
-              </a>
-            </div>
-            <div class="col-12 col-md-auto">
-              <a href="https://www.linkedin.com/in/robertbaufeld/" target="_blank" class="peach-bg text-blue fs-5 border p-3 rounded-5 d-flex align-items-center">
-                <i class="fa-brands fa-linkedin-in fs-3 me-3"></i>LinkedIn
-              </a>
-            </div>
+            <h3 class="mb-3">Currently learning:</h3>
+            <p class="fs-6">Godot</p>
           </div>
         </div>
-      </div>
-      <div>
-        <ul class="nav-footer d-flex justify-content-center gap-4 p-0">
-          <li class="nav-item">
-            <a class="nav-link active fs-6 text-reset fw-medium" aria-current="page" href="#">Back to top</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fs-6 text-reset fw-medium" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fs-6 text-reset fw-medium" href="#about">About Me</About></a></li>
-          <li class="nav-item">
-            <a class="nav-link fs-6 text-reset fw-medium" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer class="blue-bg text-center py-3 d-flex flex-column gap-2">
+      <section
+        id="contact"
+        class="d-flex flex-column justify-content-between blue-bg pt-5"
+      >
+        <h2 class="section-header text-peach ms-3">Contact_</h2>
+        <div class="container">
+          <div class="d-flex flex-column align-items-center gap-3 my-5">
+            <h3 class="text-peach py-5">Let's get in touch!</h3>
+            <div class="row justify-content-center g-4">
+              <!-- Use Bootstrap's row and gap classes -->
+              <div class="col-8 col-md-auto d-flex justify-content-center">
+                <!-- Ensure full width on small screens, auto width on medium and up -->
+                <a
+                  class="peach-bg text-blue border py-2 px-3 rounded-5 d-flex align-items-center"
+                  href="mailto:rbaufeld@posteo.de"
+                >
+                  <i class="fa-solid fa-envelope me-2 fs-3"></i
+                  >rbaufeld@posteo.de
+                </a>
+              </div>
+              <div class="col-8 col-md-auto d-flex justify-content-center">
+                <a
+                  href="https://github.com/RobertLikesCoding"
+                  target="_blank"
+                  class="peach-bg text-blue border py-2 px-3 rounded-5 d-flex align-items-center"
+                >
+                  <i class="fa-brands fa-github fs-3 me-3"></i>GitHub
+                </a>
+              </div>
+              <div class="col-8 col-md-auto d-flex justify-content-center">
+                <a
+                  href="https://www.linkedin.com/in/robertbaufeld/"
+                  target="_blank"
+                  class="peach-bg text-blue border py-2 px-3 rounded-5 d-flex align-items-center"
+                >
+                  <i class="fa-brands fa-linkedin-in fs-3 me-3"></i>LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <ul class="nav-footer d-flex justify-content-center gap-4 p-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active fs-6 text-reset fw-medium"
+                aria-current="page"
+                href="#"
+                >Back to top</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-6 text-reset fw-medium" href="#projects"
+                >Projects</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-6 text-reset fw-medium" href="#about"
+                >About Me</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-6 text-reset fw-medium" href="#contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
 
-    <p class="text-peach fs-6 m-0">© 2024 Robert Baufeld</p>
-  </footer>
+    <footer class="blue-bg text-center py-3 d-flex flex-column gap-2">
+      <p id="copyright" class="text-peach fs-6 m-0"></p>
+    </footer>
 
-  <script src="assets/script.js"></script>
-  <script src="https://kit.fontawesome.com/f4feb9ff8b.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+    <script src="assets/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f4feb9ff8b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
