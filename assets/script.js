@@ -59,3 +59,8 @@ function toggleTheme() {
   root.setAttribute("data-theme", nextTheme);
   localStorage.setItem("theme", nextTheme);
 }
+
+// Footer Copyright Date
+const footerNote = document.getElementById("copyright");
+const currentYear = new Date(Date.now()).getFullYear();
+footerNote.innerText = `© ${currentYear} Robert Baufeld`;
