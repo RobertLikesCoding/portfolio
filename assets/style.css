@@ -147,6 +147,13 @@ a {
   line-height: 1.5;
 }
 
+@media screen and (max-width: 1200px) {
+  #hero-text-container {
+    align-items: center;
+    text-align: center;
+  }
+}
+
 /* Projects Section */
 
 #projects,
@@ -223,10 +230,11 @@ a {
 
 #mobile-nav {
   display: none;
+  transition: all 0.5s ease-in-out;
+  z-index: 1000;
 }
 
 .mobile-menu {
-  position: relative;
   display: inline-block;
 }
 
@@ -238,8 +246,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 20px;
-  width: 28px;
+  height: 24px;
+  width: 26px;
   cursor: pointer;
   margin: 1rem;
 
@@ -277,19 +285,22 @@ a {
 }
 
 .mobile-links {
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: 56px;
   background-color: var(--clr-secondary);
-  max-height: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
+  width: 100vw;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
+  transform: translateY(-100%);
+  transition: all 0.5s ease-in-out;
+  padding-top: 1rem;
 
   a {
     display: block;
-    text-align: center;
-    padding: 10px;
+    padding: 0.5rem 1rem;
     transform: all 0.3s ease-in-out;
+    text-align: left;
   }
 
   li {
@@ -303,19 +314,6 @@ a {
 }
 
 .mobile-links.open {
-  max-height: fit-content;
   border-bottom: 4px solid var(--clr-primary);
-}
-
-@media screen and (max-width: 1200px) {
-  #hero-text-container {
-    align-items: center;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .my-modal {
-    width: 75%;
-  }
+  transform: translateY(0);
 }
